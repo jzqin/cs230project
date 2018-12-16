@@ -17,20 +17,20 @@ The preprocessing code is located in the following files:
 ./cta-scripts/util/* : utility functions for preprocess_data.py
 
 ## Modelling
-Modeling includes testing different 1) architectures, 2) upsampling extents, 3) loss weights, 4) learning rate
-./cta-scripts/architecture_and_hyperparam_search.ipynb : script to automate invoking calling the CSAIL network via shell commands
-./cta-scripts/evaluate_models.ipynb : after a model is trained, this script runs the model on the test data
+Modeling includes testing different 1) architectures, 2) upsampling extents, 3) loss weights, 4) learning rate  
+./cta-scripts/architecture_and_hyperparam_search.ipynb : script to automate invoking calling the CSAIL network via shell commands  
+./cta-scripts/evaluate_models.ipynb : after a model is trained, this script runs the model on the test data  
 ./resnet/semantic-segmentation-pytorch : code for repository used for modeling
 
-We changed the following aspects of the original semantic-segmentation repo:
-train.py : added weights to negative log likelihood function
-	   model originally ignores background pixels in loss function, so we changed the data preprocessing in the code to include background pixel error
-data/ : changed class labels for our 2 class segmentation
+We changed the following aspects of the original semantic-segmentation repo:  
+train.py : added weights to negative log likelihood function  
+	   model originally ignores background pixels in loss function, so we changed the data preprocessing in the code to include background pixel error  
+data/ : changed class labels for our 2 class segmentation  
 
 ## Analysis
-Analyze data by seeing how training loss and IOU change over time, visualizing data with plots
-./cta-scripts/visualize_metrics.ipynb : code for visualizing training IOU and loss for architecture and hyperparameter tuning
-./cta-scripts/visualize_data-Error_analysis.ipynb : visualize individual images for determining model deficits and prediction capabilities
+Analyze data by seeing how training loss and IOU change over time, visualizing data with plots  
+./cta-scripts/visualize_metrics.ipynb : code for visualizing training IOU and loss for architecture and hyperparameter tuning  
+./cta-scripts/visualize_data-Error_analysis.ipynb : visualize individual images for determining model deficits and prediction capabilities  
 
 
 
