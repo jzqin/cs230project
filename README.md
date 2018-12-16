@@ -24,9 +24,13 @@ Modeling includes testing different 1) architectures, 2) upsampling extents, 3) 
 
 We changed the following aspects of the original semantic-segmentation repo:  
 * train.py :
-** added weights to negative log likelihood function  
-** model originally ignores background pixels in loss function, so we changed the data preprocessing in the code to include background pixel error  
-* data/ : changed class labels for our 2 class segmentation  
+  * added weights to negative log likelihood function  
+  * model originally ignores background pixels in loss function, so we changed the data preprocessing in the code to include background pixel error
+* eval.py :
+  * include computing loss of background pixels
+* models/model.py :
+  * calculate and output IOU for modeling
+* data/object_info.csv : changed class labels for our 2 class segmentation  
 
 ## Analysis
 Analyze data by seeing how training loss and IOU change over time, visualizing data with plots  
