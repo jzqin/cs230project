@@ -1,0 +1,26 @@
+Input arguments:
+id               resnet50_upernet_0.002-resnet50-upernet-ngpus2-batchSize4-imgMaxSize1000-paddingConst32-segmDownsampleRate4-LR_encoder0.02-LR_decoder0.002-epoch20
+suffix           _epoch_20.pth
+arch_encoder     resnet50
+arch_decoder     upernet
+fc_dim           2048
+list_val         /home/ky_aneur/cs230/code/cta-scripts/dev_list.odgt
+root_dataset     /data2/yeom/ky_aneur/sah_png/dev/
+num_val          -1
+num_class        2
+batch_size       1
+imgSize          [450]
+imgMaxSize       1000
+padding_constant 8
+ckpt             /data2/yeom/ky_aneur/results/ckpt/learning_rate/
+visualize        False
+result           /data2/yeom/ky_aneur/results/dev/resnet50_upernet_0.002
+gpu_id           2
+Loading weights for net_encoder
+Loading weights for net_decoder
+# samples: 2900
+class [0], IoU: 1.0000
+class [1], IoU: 0.4190
+[Eval Summary]:
+Mean IoU: 0.7095, Accuracy: 100.00%, Inference Time: 0.0874s
+Evaluation Done!

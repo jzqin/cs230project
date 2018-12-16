@@ -1,0 +1,557 @@
+Input arguments:
+id               resnet50_upernet_train2
+arch_encoder     resnet50
+arch_decoder     upernet
+weights_encoder  
+weights_decoder  
+fc_dim           2048
+list_train       /home/ky_aneur/cs230/code/cta-scripts/train_list_40x_upsampling.odgt
+list_val         ./data/validation.odgt
+root_dataset     /data2/yeom/ky_aneur/sah_png/train
+num_gpus         2
+batch_size_per_gpu 2
+num_epoch        20
+start_epoch      1
+epoch_iters      500
+optim            adam
+lr_encoder       0.02
+lr_decoder       0.02
+lr_pow           0.9
+beta1            0.9
+weight_decay     0.0001
+deep_sup_scale   0.4
+fix_bn           0
+num_class        2
+workers          16
+imgSize          [300, 375, 450, 525, 600]
+imgMaxSize       1000
+padding_constant 32
+segm_downsampling_rate 4
+random_flip      True
+seed             304
+ckpt             /data2/yeom/ky_aneur/results/ckpt/loss_weights/
+disp_iter        20
+Model ID: resnet50_upernet_train2-resnet50-upernet-ngpus2-batchSize4-imgMaxSize1000-paddingConst32-segmDownsampleRate4-LR_encoder0.02-LR_decoder0.02-epoch20
+# samples: 36560
+1 Epoch = 500 iters
+Epoch: [1][0/500], Time: 3.58, Data: 0.24, lr_encoder: 0.020000, lr_decoder: 0.020000, Accuracy: 38.21, IOU: 0.000000 Loss: 1.066054
+Epoch: [1][20/500], Time: 1.16, Data: 0.05, lr_encoder: 0.019966, lr_decoder: 0.019966, Accuracy: 94.25, IOU: 0.011311 Loss: 0.247546
+Epoch: [1][40/500], Time: 1.13, Data: 0.05, lr_encoder: 0.019930, lr_decoder: 0.019930, Accuracy: 96.68, IOU: 0.026646 Loss: 0.162822
+Epoch: [1][60/500], Time: 1.15, Data: 0.05, lr_encoder: 0.019894, lr_decoder: 0.019894, Accuracy: 97.55, IOU: 0.032717 Loss: 0.119604
+Epoch: [1][80/500], Time: 1.13, Data: 0.04, lr_encoder: 0.019858, lr_decoder: 0.019858, Accuracy: 97.88, IOU: 0.040796 Loss: 0.102180
+Epoch: [1][100/500], Time: 1.13, Data: 0.04, lr_encoder: 0.019822, lr_decoder: 0.019822, Accuracy: 97.88, IOU: 0.036570 Loss: 0.102050
+Epoch: [1][120/500], Time: 1.14, Data: 0.04, lr_encoder: 0.019786, lr_decoder: 0.019786, Accuracy: 97.99, IOU: 0.039356 Loss: 0.097618
+Epoch: [1][140/500], Time: 1.13, Data: 0.04, lr_encoder: 0.019750, lr_decoder: 0.019750, Accuracy: 98.17, IOU: 0.042599 Loss: 0.088838
+Epoch: [1][160/500], Time: 1.12, Data: 0.04, lr_encoder: 0.019714, lr_decoder: 0.019714, Accuracy: 98.28, IOU: 0.044392 Loss: 0.083050
+Epoch: [1][180/500], Time: 1.12, Data: 0.04, lr_encoder: 0.019678, lr_decoder: 0.019678, Accuracy: 98.36, IOU: 0.045295 Loss: 0.079225
+Epoch: [1][200/500], Time: 1.13, Data: 0.04, lr_encoder: 0.019641, lr_decoder: 0.019641, Accuracy: 98.44, IOU: 0.044667 Loss: 0.074669
+Epoch: [1][220/500], Time: 1.11, Data: 0.04, lr_encoder: 0.019605, lr_decoder: 0.019605, Accuracy: 98.54, IOU: 0.046159 Loss: 0.070380
+Epoch: [1][240/500], Time: 1.11, Data: 0.04, lr_encoder: 0.019569, lr_decoder: 0.019569, Accuracy: 98.60, IOU: 0.046732 Loss: 0.067260
+Epoch: [1][260/500], Time: 1.11, Data: 0.04, lr_encoder: 0.019533, lr_decoder: 0.019533, Accuracy: 98.64, IOU: 0.047340 Loss: 0.064789
+Epoch: [1][280/500], Time: 1.10, Data: 0.04, lr_encoder: 0.019497, lr_decoder: 0.019497, Accuracy: 98.70, IOU: 0.047760 Loss: 0.062176
+Epoch: [1][300/500], Time: 1.10, Data: 0.04, lr_encoder: 0.019461, lr_decoder: 0.019461, Accuracy: 98.74, IOU: 0.048765 Loss: 0.059776
+Epoch: [1][320/500], Time: 1.10, Data: 0.04, lr_encoder: 0.019425, lr_decoder: 0.019425, Accuracy: 98.79, IOU: 0.050551 Loss: 0.057460
+Epoch: [1][340/500], Time: 1.10, Data: 0.04, lr_encoder: 0.019389, lr_decoder: 0.019389, Accuracy: 98.82, IOU: 0.052070 Loss: 0.055937
+Epoch: [1][360/500], Time: 1.11, Data: 0.04, lr_encoder: 0.019353, lr_decoder: 0.019353, Accuracy: 98.86, IOU: 0.053924 Loss: 0.053828
+Epoch: [1][380/500], Time: 1.11, Data: 0.04, lr_encoder: 0.019316, lr_decoder: 0.019316, Accuracy: 98.89, IOU: 0.055412 Loss: 0.052439
+Epoch: [1][400/500], Time: 1.11, Data: 0.04, lr_encoder: 0.019280, lr_decoder: 0.019280, Accuracy: 98.91, IOU: 0.056002 Loss: 0.051050
+Epoch: [1][420/500], Time: 1.11, Data: 0.04, lr_encoder: 0.019244, lr_decoder: 0.019244, Accuracy: 98.94, IOU: 0.057114 Loss: 0.049462
+Epoch: [1][440/500], Time: 1.11, Data: 0.04, lr_encoder: 0.019208, lr_decoder: 0.019208, Accuracy: 98.96, IOU: 0.058351 Loss: 0.048207
+Epoch: [1][460/500], Time: 1.11, Data: 0.04, lr_encoder: 0.019172, lr_decoder: 0.019172, Accuracy: 98.98, IOU: 0.058635 Loss: 0.046982
+Epoch: [1][480/500], Time: 1.10, Data: 0.04, lr_encoder: 0.019136, lr_decoder: 0.019136, Accuracy: 99.01, IOU: 0.059671 Loss: 0.045914
+Saving checkpoints...
+Epoch: [2][0/500], Time: 1.25, Data: 0.00, lr_encoder: 0.019100, lr_decoder: 0.019100, Accuracy: 99.61, IOU: 0.000000 Loss: 0.010035
+Epoch: [2][20/500], Time: 1.12, Data: 0.04, lr_encoder: 0.019063, lr_decoder: 0.019063, Accuracy: 99.60, IOU: 0.096492 Loss: 0.014565
+Epoch: [2][40/500], Time: 1.12, Data: 0.04, lr_encoder: 0.019027, lr_decoder: 0.019027, Accuracy: 99.68, IOU: 0.096917 Loss: 0.021415
+Epoch: [2][60/500], Time: 1.12, Data: 0.04, lr_encoder: 0.018991, lr_decoder: 0.018991, Accuracy: 99.53, IOU: 0.079111 Loss: 0.024354
+Epoch: [2][80/500], Time: 1.13, Data: 0.04, lr_encoder: 0.018955, lr_decoder: 0.018955, Accuracy: 99.39, IOU: 0.073895 Loss: 0.032729
+Epoch: [2][100/500], Time: 1.14, Data: 0.04, lr_encoder: 0.018918, lr_decoder: 0.018918, Accuracy: 99.30, IOU: 0.068872 Loss: 0.035575
+Epoch: [2][120/500], Time: 1.13, Data: 0.04, lr_encoder: 0.018882, lr_decoder: 0.018882, Accuracy: 99.31, IOU: 0.067683 Loss: 0.033978
+Epoch: [2][140/500], Time: 1.13, Data: 0.04, lr_encoder: 0.018846, lr_decoder: 0.018846, Accuracy: 99.32, IOU: 0.067821 Loss: 0.034082
+Epoch: [2][160/500], Time: 1.13, Data: 0.04, lr_encoder: 0.018810, lr_decoder: 0.018810, Accuracy: 99.30, IOU: 0.063639 Loss: 0.034600
+Epoch: [2][180/500], Time: 1.12, Data: 0.04, lr_encoder: 0.018774, lr_decoder: 0.018774, Accuracy: 99.29, IOU: 0.063262 Loss: 0.034109
+Epoch: [2][200/500], Time: 1.12, Data: 0.04, lr_encoder: 0.018737, lr_decoder: 0.018737, Accuracy: 99.30, IOU: 0.064065 Loss: 0.033312
+Epoch: [2][220/500], Time: 1.12, Data: 0.04, lr_encoder: 0.018701, lr_decoder: 0.018701, Accuracy: 99.32, IOU: 0.065727 Loss: 0.031909
+Epoch: [2][240/500], Time: 1.11, Data: 0.04, lr_encoder: 0.018665, lr_decoder: 0.018665, Accuracy: 99.35, IOU: 0.067089 Loss: 0.030482
+Epoch: [2][260/500], Time: 1.12, Data: 0.04, lr_encoder: 0.018628, lr_decoder: 0.018628, Accuracy: 99.36, IOU: 0.067809 Loss: 0.029909
+Epoch: [2][280/500], Time: 1.11, Data: 0.04, lr_encoder: 0.018592, lr_decoder: 0.018592, Accuracy: 99.37, IOU: 0.065768 Loss: 0.029336
+Epoch: [2][300/500], Time: 1.10, Data: 0.04, lr_encoder: 0.018556, lr_decoder: 0.018556, Accuracy: 99.38, IOU: 0.066673 Loss: 0.028362
+Epoch: [2][320/500], Time: 1.10, Data: 0.04, lr_encoder: 0.018520, lr_decoder: 0.018520, Accuracy: 99.40, IOU: 0.066719 Loss: 0.027550
+Epoch: [2][340/500], Time: 1.10, Data: 0.04, lr_encoder: 0.018483, lr_decoder: 0.018483, Accuracy: 99.40, IOU: 0.066744 Loss: 0.026931
+Epoch: [2][360/500], Time: 1.10, Data: 0.04, lr_encoder: 0.018447, lr_decoder: 0.018447, Accuracy: 99.41, IOU: 0.070038 Loss: 0.026161
+Epoch: [2][380/500], Time: 1.09, Data: 0.04, lr_encoder: 0.018411, lr_decoder: 0.018411, Accuracy: 99.42, IOU: 0.069852 Loss: 0.025847
+Epoch: [2][400/500], Time: 1.09, Data: 0.04, lr_encoder: 0.018374, lr_decoder: 0.018374, Accuracy: 99.43, IOU: 0.069700 Loss: 0.025358
+Epoch: [2][420/500], Time: 1.09, Data: 0.04, lr_encoder: 0.018338, lr_decoder: 0.018338, Accuracy: 99.42, IOU: 0.071152 Loss: 0.025339
+Epoch: [2][440/500], Time: 1.09, Data: 0.04, lr_encoder: 0.018302, lr_decoder: 0.018302, Accuracy: 99.42, IOU: 0.071422 Loss: 0.025086
+Epoch: [2][460/500], Time: 1.09, Data: 0.04, lr_encoder: 0.018265, lr_decoder: 0.018265, Accuracy: 99.43, IOU: 0.072495 Loss: 0.024639
+Epoch: [2][480/500], Time: 1.09, Data: 0.04, lr_encoder: 0.018229, lr_decoder: 0.018229, Accuracy: 99.44, IOU: 0.073060 Loss: 0.024340
+Saving checkpoints...
+Epoch: [3][0/500], Time: 0.89, Data: 0.00, lr_encoder: 0.018192, lr_decoder: 0.018192, Accuracy: 99.43, IOU: 0.101786 Loss: 0.014832
+Epoch: [3][20/500], Time: 1.07, Data: 0.04, lr_encoder: 0.018156, lr_decoder: 0.018156, Accuracy: 99.34, IOU: 0.076169 Loss: 0.020147
+Epoch: [3][40/500], Time: 1.09, Data: 0.04, lr_encoder: 0.018120, lr_decoder: 0.018120, Accuracy: 99.52, IOU: 0.080333 Loss: 0.018151
+Epoch: [3][60/500], Time: 1.08, Data: 0.04, lr_encoder: 0.018083, lr_decoder: 0.018083, Accuracy: 99.49, IOU: 0.074152 Loss: 0.018044
+Epoch: [3][80/500], Time: 1.07, Data: 0.04, lr_encoder: 0.018047, lr_decoder: 0.018047, Accuracy: 99.47, IOU: 0.070245 Loss: 0.019836
+Epoch: [3][100/500], Time: 1.07, Data: 0.04, lr_encoder: 0.018010, lr_decoder: 0.018010, Accuracy: 99.50, IOU: 0.079039 Loss: 0.018678
+Epoch: [3][120/500], Time: 1.08, Data: 0.04, lr_encoder: 0.017974, lr_decoder: 0.017974, Accuracy: 99.51, IOU: 0.081542 Loss: 0.018525
+Epoch: [3][140/500], Time: 1.08, Data: 0.04, lr_encoder: 0.017938, lr_decoder: 0.017938, Accuracy: 99.52, IOU: 0.081369 Loss: 0.018069
+Epoch: [3][160/500], Time: 1.08, Data: 0.04, lr_encoder: 0.017901, lr_decoder: 0.017901, Accuracy: 99.54, IOU: 0.082489 Loss: 0.018416
+Epoch: [3][180/500], Time: 1.08, Data: 0.04, lr_encoder: 0.017865, lr_decoder: 0.017865, Accuracy: 99.52, IOU: 0.083776 Loss: 0.019130
+Epoch: [3][200/500], Time: 1.08, Data: 0.04, lr_encoder: 0.017828, lr_decoder: 0.017828, Accuracy: 99.53, IOU: 0.086540 Loss: 0.018758
+Epoch: [3][220/500], Time: 1.09, Data: 0.04, lr_encoder: 0.017792, lr_decoder: 0.017792, Accuracy: 99.55, IOU: 0.086517 Loss: 0.017956
+Epoch: [3][240/500], Time: 1.09, Data: 0.04, lr_encoder: 0.017755, lr_decoder: 0.017755, Accuracy: 99.56, IOU: 0.092446 Loss: 0.017419
+Epoch: [3][260/500], Time: 1.09, Data: 0.04, lr_encoder: 0.017719, lr_decoder: 0.017719, Accuracy: 99.55, IOU: 0.090906 Loss: 0.017741
+Epoch: [3][280/500], Time: 1.09, Data: 0.04, lr_encoder: 0.017682, lr_decoder: 0.017682, Accuracy: 99.55, IOU: 0.090613 Loss: 0.017406
+Epoch: [3][300/500], Time: 1.09, Data: 0.04, lr_encoder: 0.017646, lr_decoder: 0.017646, Accuracy: 99.56, IOU: 0.092387 Loss: 0.017059
+Epoch: [3][320/500], Time: 1.09, Data: 0.04, lr_encoder: 0.017609, lr_decoder: 0.017609, Accuracy: 99.57, IOU: 0.092982 Loss: 0.016718
+Epoch: [3][340/500], Time: 1.10, Data: 0.04, lr_encoder: 0.017573, lr_decoder: 0.017573, Accuracy: 99.58, IOU: 0.092529 Loss: 0.016584
+Epoch: [3][360/500], Time: 1.09, Data: 0.04, lr_encoder: 0.017536, lr_decoder: 0.017536, Accuracy: 99.58, IOU: 0.093471 Loss: 0.016409
+Epoch: [3][380/500], Time: 1.10, Data: 0.04, lr_encoder: 0.017500, lr_decoder: 0.017500, Accuracy: 99.58, IOU: 0.093587 Loss: 0.016487
+Epoch: [3][400/500], Time: 1.10, Data: 0.04, lr_encoder: 0.017463, lr_decoder: 0.017463, Accuracy: 99.58, IOU: 0.093480 Loss: 0.016252
+Epoch: [3][420/500], Time: 1.10, Data: 0.04, lr_encoder: 0.017427, lr_decoder: 0.017427, Accuracy: 99.58, IOU: 0.093901 Loss: 0.016079
+Epoch: [3][440/500], Time: 1.10, Data: 0.04, lr_encoder: 0.017390, lr_decoder: 0.017390, Accuracy: 99.60, IOU: 0.097403 Loss: 0.015627
+Epoch: [3][460/500], Time: 1.10, Data: 0.04, lr_encoder: 0.017354, lr_decoder: 0.017354, Accuracy: 99.59, IOU: 0.097678 Loss: 0.015559
+Epoch: [3][480/500], Time: 1.10, Data: 0.04, lr_encoder: 0.017317, lr_decoder: 0.017317, Accuracy: 99.60, IOU: 0.099920 Loss: 0.015439
+Saving checkpoints...
+Epoch: [4][0/500], Time: 1.32, Data: 0.00, lr_encoder: 0.017280, lr_decoder: 0.017280, Accuracy: 99.71, IOU: 0.161974 Loss: 0.007714
+Epoch: [4][20/500], Time: 1.03, Data: 0.04, lr_encoder: 0.017244, lr_decoder: 0.017244, Accuracy: 99.45, IOU: 0.095128 Loss: 0.017479
+Epoch: [4][40/500], Time: 1.07, Data: 0.04, lr_encoder: 0.017207, lr_decoder: 0.017207, Accuracy: 99.53, IOU: 0.104217 Loss: 0.014967
+Epoch: [4][60/500], Time: 1.09, Data: 0.04, lr_encoder: 0.017171, lr_decoder: 0.017171, Accuracy: 99.60, IOU: 0.113170 Loss: 0.013229
+Epoch: [4][80/500], Time: 1.07, Data: 0.04, lr_encoder: 0.017134, lr_decoder: 0.017134, Accuracy: 99.59, IOU: 0.095148 Loss: 0.013462
+Epoch: [4][100/500], Time: 1.09, Data: 0.04, lr_encoder: 0.017097, lr_decoder: 0.017097, Accuracy: 99.63, IOU: 0.097412 Loss: 0.012442
+Epoch: [4][120/500], Time: 1.10, Data: 0.04, lr_encoder: 0.017061, lr_decoder: 0.017061, Accuracy: 99.66, IOU: 0.105501 Loss: 0.011581
+Epoch: [4][140/500], Time: 1.09, Data: 0.04, lr_encoder: 0.017024, lr_decoder: 0.017024, Accuracy: 99.67, IOU: 0.107300 Loss: 0.011168
+Epoch: [4][160/500], Time: 1.09, Data: 0.04, lr_encoder: 0.016987, lr_decoder: 0.016987, Accuracy: 99.67, IOU: 0.109540 Loss: 0.011249
+Epoch: [4][180/500], Time: 1.08, Data: 0.04, lr_encoder: 0.016951, lr_decoder: 0.016951, Accuracy: 99.66, IOU: 0.112420 Loss: 0.011561
+Epoch: [4][200/500], Time: 1.09, Data: 0.04, lr_encoder: 0.016914, lr_decoder: 0.016914, Accuracy: 99.67, IOU: 0.109891 Loss: 0.011231
+Epoch: [4][220/500], Time: 1.09, Data: 0.04, lr_encoder: 0.016877, lr_decoder: 0.016877, Accuracy: 99.68, IOU: 0.111317 Loss: 0.011510
+Epoch: [4][240/500], Time: 1.09, Data: 0.04, lr_encoder: 0.016841, lr_decoder: 0.016841, Accuracy: 99.67, IOU: 0.110123 Loss: 0.011444
+Epoch: [4][260/500], Time: 1.09, Data: 0.04, lr_encoder: 0.016804, lr_decoder: 0.016804, Accuracy: 99.67, IOU: 0.111891 Loss: 0.011371
+Epoch: [4][280/500], Time: 1.09, Data: 0.04, lr_encoder: 0.016767, lr_decoder: 0.016767, Accuracy: 99.68, IOU: 0.115023 Loss: 0.011120
+Epoch: [4][300/500], Time: 1.10, Data: 0.04, lr_encoder: 0.016731, lr_decoder: 0.016731, Accuracy: 99.69, IOU: 0.117363 Loss: 0.011349
+Epoch: [4][320/500], Time: 1.10, Data: 0.04, lr_encoder: 0.016694, lr_decoder: 0.016694, Accuracy: 99.69, IOU: 0.116040 Loss: 0.011170
+Epoch: [4][340/500], Time: 1.10, Data: 0.04, lr_encoder: 0.016657, lr_decoder: 0.016657, Accuracy: 99.69, IOU: 0.114607 Loss: 0.011180
+Epoch: [4][360/500], Time: 1.10, Data: 0.04, lr_encoder: 0.016620, lr_decoder: 0.016620, Accuracy: 99.69, IOU: 0.115777 Loss: 0.011310
+Epoch: [4][380/500], Time: 1.10, Data: 0.04, lr_encoder: 0.016584, lr_decoder: 0.016584, Accuracy: 99.69, IOU: 0.113850 Loss: 0.011481
+Epoch: [4][400/500], Time: 1.10, Data: 0.04, lr_encoder: 0.016547, lr_decoder: 0.016547, Accuracy: 99.69, IOU: 0.115590 Loss: 0.011272
+Epoch: [4][420/500], Time: 1.10, Data: 0.04, lr_encoder: 0.016510, lr_decoder: 0.016510, Accuracy: 99.69, IOU: 0.114947 Loss: 0.011363
+Epoch: [4][440/500], Time: 1.10, Data: 0.04, lr_encoder: 0.016473, lr_decoder: 0.016473, Accuracy: 99.69, IOU: 0.113504 Loss: 0.011468
+Epoch: [4][460/500], Time: 1.10, Data: 0.04, lr_encoder: 0.016436, lr_decoder: 0.016436, Accuracy: 99.69, IOU: 0.112203 Loss: 0.011348
+Epoch: [4][480/500], Time: 1.10, Data: 0.04, lr_encoder: 0.016400, lr_decoder: 0.016400, Accuracy: 99.69, IOU: 0.112705 Loss: 0.011326
+Saving checkpoints...
+Epoch: [5][0/500], Time: 1.08, Data: 0.00, lr_encoder: 0.016363, lr_decoder: 0.016363, Accuracy: 99.83, IOU: 0.230769 Loss: 0.005329
+Epoch: [5][20/500], Time: 0.97, Data: 0.04, lr_encoder: 0.016326, lr_decoder: 0.016326, Accuracy: 99.75, IOU: 0.115618 Loss: 0.010843
+Epoch: [5][40/500], Time: 1.02, Data: 0.04, lr_encoder: 0.016289, lr_decoder: 0.016289, Accuracy: 99.71, IOU: 0.122545 Loss: 0.011452
+Epoch: [5][60/500], Time: 1.04, Data: 0.04, lr_encoder: 0.016252, lr_decoder: 0.016252, Accuracy: 99.68, IOU: 0.102996 Loss: 0.013739
+Epoch: [5][80/500], Time: 1.06, Data: 0.04, lr_encoder: 0.016216, lr_decoder: 0.016216, Accuracy: 99.66, IOU: 0.105940 Loss: 0.013832
+Epoch: [5][100/500], Time: 1.07, Data: 0.04, lr_encoder: 0.016179, lr_decoder: 0.016179, Accuracy: 99.67, IOU: 0.104410 Loss: 0.012755
+Epoch: [5][120/500], Time: 1.08, Data: 0.04, lr_encoder: 0.016142, lr_decoder: 0.016142, Accuracy: 99.67, IOU: 0.098845 Loss: 0.013334
+Epoch: [5][140/500], Time: 1.08, Data: 0.04, lr_encoder: 0.016105, lr_decoder: 0.016105, Accuracy: 99.68, IOU: 0.105471 Loss: 0.012601
+Epoch: [5][160/500], Time: 1.09, Data: 0.04, lr_encoder: 0.016068, lr_decoder: 0.016068, Accuracy: 99.70, IOU: 0.106904 Loss: 0.011862
+Epoch: [5][180/500], Time: 1.09, Data: 0.04, lr_encoder: 0.016031, lr_decoder: 0.016031, Accuracy: 99.71, IOU: 0.109638 Loss: 0.011233
+Epoch: [5][200/500], Time: 1.09, Data: 0.04, lr_encoder: 0.015994, lr_decoder: 0.015994, Accuracy: 99.72, IOU: 0.112802 Loss: 0.010807
+Epoch: [5][220/500], Time: 1.08, Data: 0.04, lr_encoder: 0.015957, lr_decoder: 0.015957, Accuracy: 99.73, IOU: 0.114148 Loss: 0.010588
+Epoch: [5][240/500], Time: 1.08, Data: 0.04, lr_encoder: 0.015920, lr_decoder: 0.015920, Accuracy: 99.73, IOU: 0.118208 Loss: 0.010377
+Epoch: [5][260/500], Time: 1.08, Data: 0.04, lr_encoder: 0.015884, lr_decoder: 0.015884, Accuracy: 99.74, IOU: 0.121055 Loss: 0.010361
+Epoch: [5][280/500], Time: 1.08, Data: 0.04, lr_encoder: 0.015847, lr_decoder: 0.015847, Accuracy: 99.74, IOU: 0.124618 Loss: 0.010181
+Epoch: [5][300/500], Time: 1.08, Data: 0.04, lr_encoder: 0.015810, lr_decoder: 0.015810, Accuracy: 99.74, IOU: 0.124532 Loss: 0.010224
+Epoch: [5][320/500], Time: 1.08, Data: 0.04, lr_encoder: 0.015773, lr_decoder: 0.015773, Accuracy: 99.75, IOU: 0.124700 Loss: 0.009945
+Epoch: [5][340/500], Time: 1.08, Data: 0.04, lr_encoder: 0.015736, lr_decoder: 0.015736, Accuracy: 99.75, IOU: 0.125654 Loss: 0.009708
+Epoch: [5][360/500], Time: 1.08, Data: 0.04, lr_encoder: 0.015699, lr_decoder: 0.015699, Accuracy: 99.76, IOU: 0.129802 Loss: 0.009619
+Epoch: [5][380/500], Time: 1.08, Data: 0.04, lr_encoder: 0.015662, lr_decoder: 0.015662, Accuracy: 99.76, IOU: 0.130835 Loss: 0.009528
+Epoch: [5][400/500], Time: 1.08, Data: 0.04, lr_encoder: 0.015625, lr_decoder: 0.015625, Accuracy: 99.76, IOU: 0.131226 Loss: 0.009647
+Epoch: [5][420/500], Time: 1.08, Data: 0.04, lr_encoder: 0.015588, lr_decoder: 0.015588, Accuracy: 99.76, IOU: 0.128757 Loss: 0.009530
+Epoch: [5][440/500], Time: 1.08, Data: 0.04, lr_encoder: 0.015551, lr_decoder: 0.015551, Accuracy: 99.76, IOU: 0.130004 Loss: 0.009436
+Epoch: [5][460/500], Time: 1.07, Data: 0.04, lr_encoder: 0.015514, lr_decoder: 0.015514, Accuracy: 99.76, IOU: 0.129726 Loss: 0.009401
+Epoch: [5][480/500], Time: 1.07, Data: 0.04, lr_encoder: 0.015477, lr_decoder: 0.015477, Accuracy: 99.76, IOU: 0.131688 Loss: 0.009426
+Saving checkpoints...
+Epoch: [6][0/500], Time: 0.68, Data: 0.00, lr_encoder: 0.015440, lr_decoder: 0.015440, Accuracy: 99.86, IOU: 0.125000 Loss: 0.011078
+Epoch: [6][20/500], Time: 1.08, Data: 0.04, lr_encoder: 0.015403, lr_decoder: 0.015403, Accuracy: 99.89, IOU: 0.141089 Loss: 0.004964
+Epoch: [6][40/500], Time: 1.06, Data: 0.04, lr_encoder: 0.015366, lr_decoder: 0.015366, Accuracy: 99.85, IOU: 0.138566 Loss: 0.005892
+Epoch: [6][60/500], Time: 1.07, Data: 0.04, lr_encoder: 0.015328, lr_decoder: 0.015328, Accuracy: 99.83, IOU: 0.152428 Loss: 0.006705
+Epoch: [6][80/500], Time: 1.06, Data: 0.04, lr_encoder: 0.015291, lr_decoder: 0.015291, Accuracy: 99.82, IOU: 0.147335 Loss: 0.006847
+Epoch: [6][100/500], Time: 1.07, Data: 0.04, lr_encoder: 0.015254, lr_decoder: 0.015254, Accuracy: 99.80, IOU: 0.133390 Loss: 0.007478
+Epoch: [6][120/500], Time: 1.06, Data: 0.04, lr_encoder: 0.015217, lr_decoder: 0.015217, Accuracy: 99.81, IOU: 0.136175 Loss: 0.007282
+Epoch: [6][140/500], Time: 1.07, Data: 0.04, lr_encoder: 0.015180, lr_decoder: 0.015180, Accuracy: 99.81, IOU: 0.141159 Loss: 0.007145
+Epoch: [6][160/500], Time: 1.07, Data: 0.04, lr_encoder: 0.015143, lr_decoder: 0.015143, Accuracy: 99.80, IOU: 0.140824 Loss: 0.007370
+Epoch: [6][180/500], Time: 1.08, Data: 0.04, lr_encoder: 0.015106, lr_decoder: 0.015106, Accuracy: 99.79, IOU: 0.144479 Loss: 0.007740
+Epoch: [6][200/500], Time: 1.07, Data: 0.04, lr_encoder: 0.015069, lr_decoder: 0.015069, Accuracy: 99.78, IOU: 0.142963 Loss: 0.007938
+Epoch: [6][220/500], Time: 1.07, Data: 0.04, lr_encoder: 0.015031, lr_decoder: 0.015031, Accuracy: 99.78, IOU: 0.142041 Loss: 0.007965
+Epoch: [6][240/500], Time: 1.07, Data: 0.04, lr_encoder: 0.014994, lr_decoder: 0.014994, Accuracy: 99.78, IOU: 0.141857 Loss: 0.007946
+Epoch: [6][260/500], Time: 1.08, Data: 0.04, lr_encoder: 0.014957, lr_decoder: 0.014957, Accuracy: 99.78, IOU: 0.141204 Loss: 0.007957
+Epoch: [6][280/500], Time: 1.07, Data: 0.04, lr_encoder: 0.014920, lr_decoder: 0.014920, Accuracy: 99.79, IOU: 0.140186 Loss: 0.007781
+Epoch: [6][300/500], Time: 1.08, Data: 0.04, lr_encoder: 0.014883, lr_decoder: 0.014883, Accuracy: 99.79, IOU: 0.140938 Loss: 0.007706
+Epoch: [6][320/500], Time: 1.08, Data: 0.04, lr_encoder: 0.014846, lr_decoder: 0.014846, Accuracy: 99.79, IOU: 0.139701 Loss: 0.007804
+Epoch: [6][340/500], Time: 1.08, Data: 0.04, lr_encoder: 0.014808, lr_decoder: 0.014808, Accuracy: 99.79, IOU: 0.138367 Loss: 0.007758
+Epoch: [6][360/500], Time: 1.08, Data: 0.04, lr_encoder: 0.014771, lr_decoder: 0.014771, Accuracy: 99.79, IOU: 0.140531 Loss: 0.007645
+Epoch: [6][380/500], Time: 1.08, Data: 0.04, lr_encoder: 0.014734, lr_decoder: 0.014734, Accuracy: 99.79, IOU: 0.142746 Loss: 0.007563
+Epoch: [6][400/500], Time: 1.08, Data: 0.04, lr_encoder: 0.014697, lr_decoder: 0.014697, Accuracy: 99.79, IOU: 0.143210 Loss: 0.007738
+Epoch: [6][420/500], Time: 1.08, Data: 0.04, lr_encoder: 0.014659, lr_decoder: 0.014659, Accuracy: 99.79, IOU: 0.141857 Loss: 0.007839
+Epoch: [6][440/500], Time: 1.08, Data: 0.04, lr_encoder: 0.014622, lr_decoder: 0.014622, Accuracy: 99.79, IOU: 0.139067 Loss: 0.007991
+Epoch: [6][460/500], Time: 1.08, Data: 0.04, lr_encoder: 0.014585, lr_decoder: 0.014585, Accuracy: 99.78, IOU: 0.136950 Loss: 0.008245
+Epoch: [6][480/500], Time: 1.08, Data: 0.04, lr_encoder: 0.014548, lr_decoder: 0.014548, Accuracy: 99.77, IOU: 0.138533 Loss: 0.008332
+Saving checkpoints...
+Epoch: [7][0/500], Time: 1.33, Data: 0.00, lr_encoder: 0.014510, lr_decoder: 0.014510, Accuracy: 99.75, IOU: 0.221491 Loss: 0.005932
+Epoch: [7][20/500], Time: 1.10, Data: 0.04, lr_encoder: 0.014473, lr_decoder: 0.014473, Accuracy: 99.74, IOU: 0.129697 Loss: 0.009495
+Epoch: [7][40/500], Time: 1.11, Data: 0.04, lr_encoder: 0.014436, lr_decoder: 0.014436, Accuracy: 99.76, IOU: 0.131363 Loss: 0.008089
+Epoch: [7][60/500], Time: 1.08, Data: 0.04, lr_encoder: 0.014398, lr_decoder: 0.014398, Accuracy: 99.79, IOU: 0.141575 Loss: 0.007107
+Epoch: [7][80/500], Time: 1.07, Data: 0.04, lr_encoder: 0.014361, lr_decoder: 0.014361, Accuracy: 99.81, IOU: 0.149243 Loss: 0.007155
+Epoch: [7][100/500], Time: 1.05, Data: 0.04, lr_encoder: 0.014324, lr_decoder: 0.014324, Accuracy: 99.80, IOU: 0.149773 Loss: 0.006988
+Epoch: [7][120/500], Time: 1.06, Data: 0.04, lr_encoder: 0.014286, lr_decoder: 0.014286, Accuracy: 99.80, IOU: 0.150197 Loss: 0.007365
+Epoch: [7][140/500], Time: 1.06, Data: 0.04, lr_encoder: 0.014249, lr_decoder: 0.014249, Accuracy: 99.80, IOU: 0.150677 Loss: 0.007418
+Epoch: [7][160/500], Time: 1.06, Data: 0.04, lr_encoder: 0.014211, lr_decoder: 0.014211, Accuracy: 99.78, IOU: 0.147986 Loss: 0.007969
+Epoch: [7][180/500], Time: 1.06, Data: 0.04, lr_encoder: 0.014174, lr_decoder: 0.014174, Accuracy: 99.78, IOU: 0.148082 Loss: 0.007740
+Epoch: [7][200/500], Time: 1.06, Data: 0.04, lr_encoder: 0.014137, lr_decoder: 0.014137, Accuracy: 99.77, IOU: 0.148279 Loss: 0.008359
+Epoch: [7][220/500], Time: 1.07, Data: 0.04, lr_encoder: 0.014099, lr_decoder: 0.014099, Accuracy: 99.76, IOU: 0.145728 Loss: 0.008556
+Epoch: [7][240/500], Time: 1.06, Data: 0.04, lr_encoder: 0.014062, lr_decoder: 0.014062, Accuracy: 99.77, IOU: 0.146814 Loss: 0.008340
+Epoch: [7][260/500], Time: 1.07, Data: 0.04, lr_encoder: 0.014024, lr_decoder: 0.014024, Accuracy: 99.77, IOU: 0.145297 Loss: 0.008196
+Epoch: [7][280/500], Time: 1.07, Data: 0.04, lr_encoder: 0.013987, lr_decoder: 0.013987, Accuracy: 99.77, IOU: 0.145646 Loss: 0.008031
+Epoch: [7][300/500], Time: 1.07, Data: 0.04, lr_encoder: 0.013949, lr_decoder: 0.013949, Accuracy: 99.77, IOU: 0.148227 Loss: 0.008002
+Epoch: [7][320/500], Time: 1.07, Data: 0.04, lr_encoder: 0.013912, lr_decoder: 0.013912, Accuracy: 99.78, IOU: 0.152735 Loss: 0.007853
+Epoch: [7][340/500], Time: 1.07, Data: 0.04, lr_encoder: 0.013874, lr_decoder: 0.013874, Accuracy: 99.78, IOU: 0.152998 Loss: 0.007724
+Epoch: [7][360/500], Time: 1.07, Data: 0.04, lr_encoder: 0.013837, lr_decoder: 0.013837, Accuracy: 99.79, IOU: 0.153501 Loss: 0.007631
+Epoch: [7][380/500], Time: 1.07, Data: 0.04, lr_encoder: 0.013799, lr_decoder: 0.013799, Accuracy: 99.79, IOU: 0.153549 Loss: 0.007540
+Epoch: [7][400/500], Time: 1.07, Data: 0.04, lr_encoder: 0.013762, lr_decoder: 0.013762, Accuracy: 99.79, IOU: 0.155898 Loss: 0.007451
+Epoch: [7][420/500], Time: 1.07, Data: 0.04, lr_encoder: 0.013724, lr_decoder: 0.013724, Accuracy: 99.80, IOU: 0.156156 Loss: 0.007257
+Epoch: [7][440/500], Time: 1.07, Data: 0.04, lr_encoder: 0.013687, lr_decoder: 0.013687, Accuracy: 99.80, IOU: 0.158219 Loss: 0.007204
+Epoch: [7][460/500], Time: 1.07, Data: 0.04, lr_encoder: 0.013649, lr_decoder: 0.013649, Accuracy: 99.80, IOU: 0.159535 Loss: 0.007126
+Epoch: [7][480/500], Time: 1.07, Data: 0.04, lr_encoder: 0.013612, lr_decoder: 0.013612, Accuracy: 99.80, IOU: 0.160633 Loss: 0.007146
+Saving checkpoints...
+Epoch: [8][0/500], Time: 1.08, Data: 0.00, lr_encoder: 0.013574, lr_decoder: 0.013574, Accuracy: 99.96, IOU: 0.223404 Loss: 0.001308
+Epoch: [8][20/500], Time: 1.04, Data: 0.04, lr_encoder: 0.013537, lr_decoder: 0.013537, Accuracy: 99.84, IOU: 0.167276 Loss: 0.007684
+Epoch: [8][40/500], Time: 1.03, Data: 0.04, lr_encoder: 0.013499, lr_decoder: 0.013499, Accuracy: 99.82, IOU: 0.168250 Loss: 0.006706
+Epoch: [8][60/500], Time: 1.04, Data: 0.04, lr_encoder: 0.013461, lr_decoder: 0.013461, Accuracy: 99.78, IOU: 0.165106 Loss: 0.008360
+Epoch: [8][80/500], Time: 1.05, Data: 0.04, lr_encoder: 0.013424, lr_decoder: 0.013424, Accuracy: 99.79, IOU: 0.162100 Loss: 0.007768
+Epoch: [8][100/500], Time: 1.07, Data: 0.04, lr_encoder: 0.013386, lr_decoder: 0.013386, Accuracy: 99.79, IOU: 0.162810 Loss: 0.008557
+Epoch: [8][120/500], Time: 1.09, Data: 0.04, lr_encoder: 0.013348, lr_decoder: 0.013348, Accuracy: 99.77, IOU: 0.157085 Loss: 0.008854
+Epoch: [8][140/500], Time: 1.09, Data: 0.04, lr_encoder: 0.013311, lr_decoder: 0.013311, Accuracy: 99.76, IOU: 0.154220 Loss: 0.008735
+Epoch: [8][160/500], Time: 1.11, Data: 0.04, lr_encoder: 0.013273, lr_decoder: 0.013273, Accuracy: 99.77, IOU: 0.152840 Loss: 0.008598
+Epoch: [8][180/500], Time: 1.10, Data: 0.04, lr_encoder: 0.013235, lr_decoder: 0.013235, Accuracy: 99.77, IOU: 0.154917 Loss: 0.008312
+Epoch: [8][200/500], Time: 1.11, Data: 0.04, lr_encoder: 0.013198, lr_decoder: 0.013198, Accuracy: 99.78, IOU: 0.156259 Loss: 0.007955
+Epoch: [8][220/500], Time: 1.11, Data: 0.04, lr_encoder: 0.013160, lr_decoder: 0.013160, Accuracy: 99.79, IOU: 0.158471 Loss: 0.007591
+Epoch: [8][240/500], Time: 1.10, Data: 0.04, lr_encoder: 0.013122, lr_decoder: 0.013122, Accuracy: 99.80, IOU: 0.157463 Loss: 0.007298
+Epoch: [8][260/500], Time: 1.10, Data: 0.04, lr_encoder: 0.013085, lr_decoder: 0.013085, Accuracy: 99.81, IOU: 0.160816 Loss: 0.007131
+Epoch: [8][280/500], Time: 1.10, Data: 0.04, lr_encoder: 0.013047, lr_decoder: 0.013047, Accuracy: 99.81, IOU: 0.157190 Loss: 0.007031
+Epoch: [8][300/500], Time: 1.10, Data: 0.04, lr_encoder: 0.013009, lr_decoder: 0.013009, Accuracy: 99.81, IOU: 0.157782 Loss: 0.006879
+Epoch: [8][320/500], Time: 1.11, Data: 0.04, lr_encoder: 0.012971, lr_decoder: 0.012971, Accuracy: 99.81, IOU: 0.159214 Loss: 0.006821
+Epoch: [8][340/500], Time: 1.11, Data: 0.04, lr_encoder: 0.012934, lr_decoder: 0.012934, Accuracy: 99.82, IOU: 0.162664 Loss: 0.006748
+Epoch: [8][360/500], Time: 1.11, Data: 0.04, lr_encoder: 0.012896, lr_decoder: 0.012896, Accuracy: 99.82, IOU: 0.163616 Loss: 0.006655
+Epoch: [8][380/500], Time: 1.10, Data: 0.04, lr_encoder: 0.012858, lr_decoder: 0.012858, Accuracy: 99.81, IOU: 0.161965 Loss: 0.006855
+Epoch: [8][400/500], Time: 1.10, Data: 0.04, lr_encoder: 0.012820, lr_decoder: 0.012820, Accuracy: 99.81, IOU: 0.163825 Loss: 0.006813
+Epoch: [8][420/500], Time: 1.10, Data: 0.04, lr_encoder: 0.012782, lr_decoder: 0.012782, Accuracy: 99.82, IOU: 0.164358 Loss: 0.006684
+Epoch: [8][440/500], Time: 1.10, Data: 0.04, lr_encoder: 0.012744, lr_decoder: 0.012744, Accuracy: 99.82, IOU: 0.163364 Loss: 0.006624
+Epoch: [8][460/500], Time: 1.10, Data: 0.04, lr_encoder: 0.012707, lr_decoder: 0.012707, Accuracy: 99.82, IOU: 0.163954 Loss: 0.006561
+Epoch: [8][480/500], Time: 1.10, Data: 0.04, lr_encoder: 0.012669, lr_decoder: 0.012669, Accuracy: 99.82, IOU: 0.165351 Loss: 0.006726
+Saving checkpoints...
+Epoch: [9][0/500], Time: 1.31, Data: 0.00, lr_encoder: 0.012631, lr_decoder: 0.012631, Accuracy: 99.62, IOU: 0.213716 Loss: 0.009400
+Epoch: [9][20/500], Time: 1.17, Data: 0.04, lr_encoder: 0.012593, lr_decoder: 0.012593, Accuracy: 99.82, IOU: 0.149967 Loss: 0.005522
+Epoch: [9][40/500], Time: 1.14, Data: 0.04, lr_encoder: 0.012555, lr_decoder: 0.012555, Accuracy: 99.84, IOU: 0.166355 Loss: 0.005236
+Epoch: [9][60/500], Time: 1.13, Data: 0.04, lr_encoder: 0.012517, lr_decoder: 0.012517, Accuracy: 99.83, IOU: 0.166408 Loss: 0.006528
+Epoch: [9][80/500], Time: 1.15, Data: 0.04, lr_encoder: 0.012479, lr_decoder: 0.012479, Accuracy: 99.82, IOU: 0.163117 Loss: 0.006539
+Epoch: [9][100/500], Time: 1.12, Data: 0.04, lr_encoder: 0.012441, lr_decoder: 0.012441, Accuracy: 99.83, IOU: 0.173320 Loss: 0.006304
+Epoch: [9][120/500], Time: 1.12, Data: 0.04, lr_encoder: 0.012403, lr_decoder: 0.012403, Accuracy: 99.83, IOU: 0.170154 Loss: 0.006095
+Epoch: [9][140/500], Time: 1.10, Data: 0.04, lr_encoder: 0.012365, lr_decoder: 0.012365, Accuracy: 99.83, IOU: 0.165291 Loss: 0.006492
+Epoch: [9][160/500], Time: 1.10, Data: 0.04, lr_encoder: 0.012327, lr_decoder: 0.012327, Accuracy: 99.83, IOU: 0.162136 Loss: 0.006308
+Epoch: [9][180/500], Time: 1.10, Data: 0.04, lr_encoder: 0.012289, lr_decoder: 0.012289, Accuracy: 99.82, IOU: 0.164038 Loss: 0.006777
+Epoch: [9][200/500], Time: 1.09, Data: 0.04, lr_encoder: 0.012251, lr_decoder: 0.012251, Accuracy: 99.81, IOU: 0.158263 Loss: 0.007187
+Epoch: [9][220/500], Time: 1.09, Data: 0.04, lr_encoder: 0.012213, lr_decoder: 0.012213, Accuracy: 99.80, IOU: 0.161230 Loss: 0.007329
+Epoch: [9][240/500], Time: 1.10, Data: 0.04, lr_encoder: 0.012175, lr_decoder: 0.012175, Accuracy: 99.80, IOU: 0.155239 Loss: 0.007270
+Epoch: [9][260/500], Time: 1.09, Data: 0.04, lr_encoder: 0.012137, lr_decoder: 0.012137, Accuracy: 99.80, IOU: 0.158079 Loss: 0.007246
+Epoch: [9][280/500], Time: 1.09, Data: 0.04, lr_encoder: 0.012099, lr_decoder: 0.012099, Accuracy: 99.80, IOU: 0.155278 Loss: 0.007207
+Epoch: [9][300/500], Time: 1.09, Data: 0.04, lr_encoder: 0.012061, lr_decoder: 0.012061, Accuracy: 99.80, IOU: 0.156678 Loss: 0.007191
+Epoch: [9][320/500], Time: 1.10, Data: 0.04, lr_encoder: 0.012023, lr_decoder: 0.012023, Accuracy: 99.81, IOU: 0.158633 Loss: 0.007094
+Epoch: [9][340/500], Time: 1.10, Data: 0.04, lr_encoder: 0.011985, lr_decoder: 0.011985, Accuracy: 99.81, IOU: 0.157018 Loss: 0.006914
+Epoch: [9][360/500], Time: 1.10, Data: 0.04, lr_encoder: 0.011947, lr_decoder: 0.011947, Accuracy: 99.81, IOU: 0.157368 Loss: 0.007136
+Epoch: [9][380/500], Time: 1.10, Data: 0.04, lr_encoder: 0.011909, lr_decoder: 0.011909, Accuracy: 99.81, IOU: 0.155635 Loss: 0.007184
+Epoch: [9][400/500], Time: 1.10, Data: 0.04, lr_encoder: 0.011870, lr_decoder: 0.011870, Accuracy: 99.81, IOU: 0.153227 Loss: 0.007234
+Epoch: [9][420/500], Time: 1.10, Data: 0.04, lr_encoder: 0.011832, lr_decoder: 0.011832, Accuracy: 99.81, IOU: 0.154803 Loss: 0.007136
+Epoch: [9][440/500], Time: 1.10, Data: 0.04, lr_encoder: 0.011794, lr_decoder: 0.011794, Accuracy: 99.81, IOU: 0.155776 Loss: 0.007024
+Epoch: [9][460/500], Time: 1.09, Data: 0.04, lr_encoder: 0.011756, lr_decoder: 0.011756, Accuracy: 99.81, IOU: 0.157310 Loss: 0.007131
+Epoch: [9][480/500], Time: 1.09, Data: 0.04, lr_encoder: 0.011718, lr_decoder: 0.011718, Accuracy: 99.81, IOU: 0.155318 Loss: 0.007167
+Saving checkpoints...
+Epoch: [10][0/500], Time: 1.30, Data: 0.00, lr_encoder: 0.011680, lr_decoder: 0.011680, Accuracy: 99.85, IOU: 0.095808 Loss: 0.005093
+Epoch: [10][20/500], Time: 1.04, Data: 0.04, lr_encoder: 0.011641, lr_decoder: 0.011641, Accuracy: 99.85, IOU: 0.144626 Loss: 0.004471
+Epoch: [10][40/500], Time: 1.10, Data: 0.04, lr_encoder: 0.011603, lr_decoder: 0.011603, Accuracy: 99.86, IOU: 0.165077 Loss: 0.004436
+Epoch: [10][60/500], Time: 1.12, Data: 0.04, lr_encoder: 0.011565, lr_decoder: 0.011565, Accuracy: 99.85, IOU: 0.171719 Loss: 0.005056
+Epoch: [10][80/500], Time: 1.09, Data: 0.04, lr_encoder: 0.011527, lr_decoder: 0.011527, Accuracy: 99.85, IOU: 0.176750 Loss: 0.005222
+Epoch: [10][100/500], Time: 1.11, Data: 0.04, lr_encoder: 0.011488, lr_decoder: 0.011488, Accuracy: 99.85, IOU: 0.169990 Loss: 0.005319
+Epoch: [10][120/500], Time: 1.11, Data: 0.04, lr_encoder: 0.011450, lr_decoder: 0.011450, Accuracy: 99.85, IOU: 0.177275 Loss: 0.005347
+Epoch: [10][140/500], Time: 1.11, Data: 0.04, lr_encoder: 0.011412, lr_decoder: 0.011412, Accuracy: 99.85, IOU: 0.175847 Loss: 0.005288
+Epoch: [10][160/500], Time: 1.11, Data: 0.04, lr_encoder: 0.011373, lr_decoder: 0.011373, Accuracy: 99.85, IOU: 0.179577 Loss: 0.005404
+Epoch: [10][180/500], Time: 1.11, Data: 0.04, lr_encoder: 0.011335, lr_decoder: 0.011335, Accuracy: 99.85, IOU: 0.176876 Loss: 0.005655
+Epoch: [10][200/500], Time: 1.11, Data: 0.04, lr_encoder: 0.011297, lr_decoder: 0.011297, Accuracy: 99.84, IOU: 0.173237 Loss: 0.005778
+Epoch: [10][220/500], Time: 1.10, Data: 0.04, lr_encoder: 0.011258, lr_decoder: 0.011258, Accuracy: 99.84, IOU: 0.170591 Loss: 0.005812
+Epoch: [10][240/500], Time: 1.10, Data: 0.04, lr_encoder: 0.011220, lr_decoder: 0.011220, Accuracy: 99.84, IOU: 0.170935 Loss: 0.005777
+Epoch: [10][260/500], Time: 1.09, Data: 0.04, lr_encoder: 0.011182, lr_decoder: 0.011182, Accuracy: 99.85, IOU: 0.171959 Loss: 0.005636
+Epoch: [10][280/500], Time: 1.10, Data: 0.04, lr_encoder: 0.011143, lr_decoder: 0.011143, Accuracy: 99.85, IOU: 0.170006 Loss: 0.005665
+Epoch: [10][300/500], Time: 1.10, Data: 0.04, lr_encoder: 0.011105, lr_decoder: 0.011105, Accuracy: 99.85, IOU: 0.167413 Loss: 0.005617
+Epoch: [10][320/500], Time: 1.10, Data: 0.04, lr_encoder: 0.011066, lr_decoder: 0.011066, Accuracy: 99.85, IOU: 0.168237 Loss: 0.005703
+Epoch: [10][340/500], Time: 1.10, Data: 0.04, lr_encoder: 0.011028, lr_decoder: 0.011028, Accuracy: 99.84, IOU: 0.168025 Loss: 0.005826
+Epoch: [10][360/500], Time: 1.10, Data: 0.04, lr_encoder: 0.010989, lr_decoder: 0.010989, Accuracy: 99.85, IOU: 0.167573 Loss: 0.005726
+Epoch: [10][380/500], Time: 1.09, Data: 0.04, lr_encoder: 0.010951, lr_decoder: 0.010951, Accuracy: 99.85, IOU: 0.165877 Loss: 0.005767
+Epoch: [10][400/500], Time: 1.09, Data: 0.04, lr_encoder: 0.010912, lr_decoder: 0.010912, Accuracy: 99.85, IOU: 0.165483 Loss: 0.005710
+Epoch: [10][420/500], Time: 1.09, Data: 0.04, lr_encoder: 0.010874, lr_decoder: 0.010874, Accuracy: 99.85, IOU: 0.164759 Loss: 0.005760
+Epoch: [10][440/500], Time: 1.09, Data: 0.04, lr_encoder: 0.010835, lr_decoder: 0.010835, Accuracy: 99.85, IOU: 0.165668 Loss: 0.005741
+Epoch: [10][460/500], Time: 1.09, Data: 0.04, lr_encoder: 0.010797, lr_decoder: 0.010797, Accuracy: 99.85, IOU: 0.167937 Loss: 0.005794
+Epoch: [10][480/500], Time: 1.09, Data: 0.04, lr_encoder: 0.010758, lr_decoder: 0.010758, Accuracy: 99.85, IOU: 0.168234 Loss: 0.005748
+Saving checkpoints...
+Epoch: [11][0/500], Time: 1.30, Data: 0.00, lr_encoder: 0.010720, lr_decoder: 0.010720, Accuracy: 99.89, IOU: 0.410537 Loss: 0.003314
+Epoch: [11][20/500], Time: 1.10, Data: 0.04, lr_encoder: 0.010681, lr_decoder: 0.010681, Accuracy: 99.83, IOU: 0.189245 Loss: 0.005122
+Epoch: [11][40/500], Time: 1.10, Data: 0.04, lr_encoder: 0.010642, lr_decoder: 0.010642, Accuracy: 99.85, IOU: 0.184916 Loss: 0.005397
+Epoch: [11][60/500], Time: 1.08, Data: 0.04, lr_encoder: 0.010604, lr_decoder: 0.010604, Accuracy: 99.85, IOU: 0.187137 Loss: 0.005246
+Epoch: [11][80/500], Time: 1.06, Data: 0.04, lr_encoder: 0.010565, lr_decoder: 0.010565, Accuracy: 99.85, IOU: 0.190979 Loss: 0.005230
+Epoch: [11][100/500], Time: 1.06, Data: 0.04, lr_encoder: 0.010527, lr_decoder: 0.010527, Accuracy: 99.86, IOU: 0.192182 Loss: 0.005107
+Epoch: [11][120/500], Time: 1.09, Data: 0.04, lr_encoder: 0.010488, lr_decoder: 0.010488, Accuracy: 99.85, IOU: 0.188652 Loss: 0.005221
+Epoch: [11][140/500], Time: 1.09, Data: 0.04, lr_encoder: 0.010449, lr_decoder: 0.010449, Accuracy: 99.86, IOU: 0.194422 Loss: 0.005049
+Epoch: [11][160/500], Time: 1.09, Data: 0.04, lr_encoder: 0.010410, lr_decoder: 0.010410, Accuracy: 99.86, IOU: 0.201692 Loss: 0.005046
+Epoch: [11][180/500], Time: 1.09, Data: 0.04, lr_encoder: 0.010372, lr_decoder: 0.010372, Accuracy: 99.86, IOU: 0.197567 Loss: 0.005095
+Epoch: [11][200/500], Time: 1.09, Data: 0.04, lr_encoder: 0.010333, lr_decoder: 0.010333, Accuracy: 99.86, IOU: 0.194522 Loss: 0.005020
+Epoch: [11][220/500], Time: 1.08, Data: 0.04, lr_encoder: 0.010294, lr_decoder: 0.010294, Accuracy: 99.87, IOU: 0.194155 Loss: 0.004991
+Epoch: [11][240/500], Time: 1.08, Data: 0.04, lr_encoder: 0.010256, lr_decoder: 0.010256, Accuracy: 99.86, IOU: 0.188996 Loss: 0.005032
+Epoch: [11][260/500], Time: 1.08, Data: 0.04, lr_encoder: 0.010217, lr_decoder: 0.010217, Accuracy: 99.86, IOU: 0.192860 Loss: 0.005038
+Epoch: [11][280/500], Time: 1.08, Data: 0.04, lr_encoder: 0.010178, lr_decoder: 0.010178, Accuracy: 99.86, IOU: 0.189427 Loss: 0.005109
+Epoch: [11][300/500], Time: 1.08, Data: 0.04, lr_encoder: 0.010139, lr_decoder: 0.010139, Accuracy: 99.86, IOU: 0.193228 Loss: 0.004983
+Epoch: [11][320/500], Time: 1.08, Data: 0.04, lr_encoder: 0.010100, lr_decoder: 0.010100, Accuracy: 99.87, IOU: 0.194840 Loss: 0.004875
+Epoch: [11][340/500], Time: 1.07, Data: 0.04, lr_encoder: 0.010061, lr_decoder: 0.010061, Accuracy: 99.87, IOU: 0.195652 Loss: 0.004904
+Epoch: [11][360/500], Time: 1.08, Data: 0.04, lr_encoder: 0.010023, lr_decoder: 0.010023, Accuracy: 99.87, IOU: 0.195246 Loss: 0.004887
+Epoch: [11][380/500], Time: 1.07, Data: 0.04, lr_encoder: 0.009984, lr_decoder: 0.009984, Accuracy: 99.87, IOU: 0.193928 Loss: 0.004816
+Epoch: [11][400/500], Time: 1.07, Data: 0.04, lr_encoder: 0.009945, lr_decoder: 0.009945, Accuracy: 99.87, IOU: 0.189952 Loss: 0.004722
+Epoch: [11][420/500], Time: 1.07, Data: 0.04, lr_encoder: 0.009906, lr_decoder: 0.009906, Accuracy: 99.87, IOU: 0.190824 Loss: 0.004714
+Epoch: [11][440/500], Time: 1.07, Data: 0.04, lr_encoder: 0.009867, lr_decoder: 0.009867, Accuracy: 99.87, IOU: 0.191085 Loss: 0.004766
+Epoch: [11][460/500], Time: 1.07, Data: 0.04, lr_encoder: 0.009828, lr_decoder: 0.009828, Accuracy: 99.87, IOU: 0.190241 Loss: 0.004740
+Epoch: [11][480/500], Time: 1.07, Data: 0.04, lr_encoder: 0.009789, lr_decoder: 0.009789, Accuracy: 99.87, IOU: 0.188779 Loss: 0.004748
+Saving checkpoints...
+Epoch: [12][0/500], Time: 1.30, Data: 0.00, lr_encoder: 0.009750, lr_decoder: 0.009750, Accuracy: 99.93, IOU: 0.109375 Loss: 0.002023
+Epoch: [12][20/500], Time: 1.11, Data: 0.04, lr_encoder: 0.009711, lr_decoder: 0.009711, Accuracy: 99.86, IOU: 0.158323 Loss: 0.005016
+Epoch: [12][40/500], Time: 1.11, Data: 0.04, lr_encoder: 0.009672, lr_decoder: 0.009672, Accuracy: 99.86, IOU: 0.173138 Loss: 0.004977
+Epoch: [12][60/500], Time: 1.09, Data: 0.04, lr_encoder: 0.009633, lr_decoder: 0.009633, Accuracy: 99.87, IOU: 0.197868 Loss: 0.004522
+Epoch: [12][80/500], Time: 1.11, Data: 0.04, lr_encoder: 0.009594, lr_decoder: 0.009594, Accuracy: 99.88, IOU: 0.208524 Loss: 0.004275
+Epoch: [12][100/500], Time: 1.10, Data: 0.04, lr_encoder: 0.009555, lr_decoder: 0.009555, Accuracy: 99.88, IOU: 0.214691 Loss: 0.004640
+Epoch: [12][120/500], Time: 1.09, Data: 0.04, lr_encoder: 0.009516, lr_decoder: 0.009516, Accuracy: 99.87, IOU: 0.199227 Loss: 0.004611
+Epoch: [12][140/500], Time: 1.09, Data: 0.04, lr_encoder: 0.009477, lr_decoder: 0.009477, Accuracy: 99.87, IOU: 0.196882 Loss: 0.004680
+Epoch: [12][160/500], Time: 1.09, Data: 0.04, lr_encoder: 0.009438, lr_decoder: 0.009438, Accuracy: 99.87, IOU: 0.200052 Loss: 0.004648
+Epoch: [12][180/500], Time: 1.08, Data: 0.04, lr_encoder: 0.009398, lr_decoder: 0.009398, Accuracy: 99.87, IOU: 0.198749 Loss: 0.004753
+Epoch: [12][200/500], Time: 1.08, Data: 0.04, lr_encoder: 0.009359, lr_decoder: 0.009359, Accuracy: 99.87, IOU: 0.200024 Loss: 0.004822
+Epoch: [12][220/500], Time: 1.07, Data: 0.04, lr_encoder: 0.009320, lr_decoder: 0.009320, Accuracy: 99.87, IOU: 0.198848 Loss: 0.004677
+Epoch: [12][240/500], Time: 1.07, Data: 0.04, lr_encoder: 0.009281, lr_decoder: 0.009281, Accuracy: 99.87, IOU: 0.201417 Loss: 0.004638
+Epoch: [12][260/500], Time: 1.08, Data: 0.04, lr_encoder: 0.009242, lr_decoder: 0.009242, Accuracy: 99.88, IOU: 0.200726 Loss: 0.004554
+Epoch: [12][280/500], Time: 1.08, Data: 0.04, lr_encoder: 0.009202, lr_decoder: 0.009202, Accuracy: 99.88, IOU: 0.202761 Loss: 0.004583
+Epoch: [12][300/500], Time: 1.08, Data: 0.04, lr_encoder: 0.009163, lr_decoder: 0.009163, Accuracy: 99.88, IOU: 0.204035 Loss: 0.004483
+Epoch: [12][320/500], Time: 1.08, Data: 0.04, lr_encoder: 0.009124, lr_decoder: 0.009124, Accuracy: 99.88, IOU: 0.205100 Loss: 0.004428
+Epoch: [12][340/500], Time: 1.08, Data: 0.04, lr_encoder: 0.009085, lr_decoder: 0.009085, Accuracy: 99.88, IOU: 0.202583 Loss: 0.004470
+Epoch: [12][360/500], Time: 1.08, Data: 0.04, lr_encoder: 0.009045, lr_decoder: 0.009045, Accuracy: 99.88, IOU: 0.200602 Loss: 0.004505
+Epoch: [12][380/500], Time: 1.08, Data: 0.04, lr_encoder: 0.009006, lr_decoder: 0.009006, Accuracy: 99.88, IOU: 0.202725 Loss: 0.004514
+Epoch: [12][400/500], Time: 1.08, Data: 0.04, lr_encoder: 0.008967, lr_decoder: 0.008967, Accuracy: 99.88, IOU: 0.201762 Loss: 0.004457
+Epoch: [12][420/500], Time: 1.08, Data: 0.04, lr_encoder: 0.008927, lr_decoder: 0.008927, Accuracy: 99.88, IOU: 0.201410 Loss: 0.004416
+Epoch: [12][440/500], Time: 1.08, Data: 0.04, lr_encoder: 0.008888, lr_decoder: 0.008888, Accuracy: 99.88, IOU: 0.199084 Loss: 0.004342
+Epoch: [12][460/500], Time: 1.08, Data: 0.04, lr_encoder: 0.008849, lr_decoder: 0.008849, Accuracy: 99.88, IOU: 0.200138 Loss: 0.004346
+Epoch: [12][480/500], Time: 1.08, Data: 0.04, lr_encoder: 0.008809, lr_decoder: 0.008809, Accuracy: 99.88, IOU: 0.200454 Loss: 0.004398
+Saving checkpoints...
+Epoch: [13][0/500], Time: 1.31, Data: 0.00, lr_encoder: 0.008770, lr_decoder: 0.008770, Accuracy: 99.92, IOU: 0.583231 Loss: 0.002964
+Epoch: [13][20/500], Time: 1.12, Data: 0.04, lr_encoder: 0.008730, lr_decoder: 0.008730, Accuracy: 99.88, IOU: 0.230542 Loss: 0.006241
+Epoch: [13][40/500], Time: 1.12, Data: 0.04, lr_encoder: 0.008691, lr_decoder: 0.008691, Accuracy: 99.86, IOU: 0.229667 Loss: 0.005569
+Epoch: [13][60/500], Time: 1.12, Data: 0.04, lr_encoder: 0.008651, lr_decoder: 0.008651, Accuracy: 99.86, IOU: 0.216352 Loss: 0.005880
+Epoch: [13][80/500], Time: 1.08, Data: 0.04, lr_encoder: 0.008612, lr_decoder: 0.008612, Accuracy: 99.86, IOU: 0.216776 Loss: 0.006041
+Epoch: [13][100/500], Time: 1.09, Data: 0.04, lr_encoder: 0.008572, lr_decoder: 0.008572, Accuracy: 99.86, IOU: 0.207316 Loss: 0.005727
+Epoch: [13][120/500], Time: 1.09, Data: 0.04, lr_encoder: 0.008533, lr_decoder: 0.008533, Accuracy: 99.86, IOU: 0.204633 Loss: 0.005596
+Epoch: [13][140/500], Time: 1.08, Data: 0.04, lr_encoder: 0.008493, lr_decoder: 0.008493, Accuracy: 99.86, IOU: 0.197560 Loss: 0.005461
+Epoch: [13][160/500], Time: 1.10, Data: 0.04, lr_encoder: 0.008453, lr_decoder: 0.008453, Accuracy: 99.86, IOU: 0.197174 Loss: 0.005493
+Epoch: [13][180/500], Time: 1.10, Data: 0.04, lr_encoder: 0.008414, lr_decoder: 0.008414, Accuracy: 99.86, IOU: 0.202129 Loss: 0.005404
+Epoch: [13][200/500], Time: 1.10, Data: 0.04, lr_encoder: 0.008374, lr_decoder: 0.008374, Accuracy: 99.86, IOU: 0.202498 Loss: 0.005543
+Epoch: [13][220/500], Time: 1.11, Data: 0.04, lr_encoder: 0.008334, lr_decoder: 0.008334, Accuracy: 99.86, IOU: 0.195636 Loss: 0.005590
+Epoch: [13][240/500], Time: 1.10, Data: 0.04, lr_encoder: 0.008295, lr_decoder: 0.008295, Accuracy: 99.85, IOU: 0.191656 Loss: 0.005693
+Epoch: [13][260/500], Time: 1.11, Data: 0.04, lr_encoder: 0.008255, lr_decoder: 0.008255, Accuracy: 99.85, IOU: 0.190900 Loss: 0.005735
+Epoch: [13][280/500], Time: 1.10, Data: 0.04, lr_encoder: 0.008215, lr_decoder: 0.008215, Accuracy: 99.85, IOU: 0.185377 Loss: 0.005587
+Epoch: [13][300/500], Time: 1.10, Data: 0.04, lr_encoder: 0.008176, lr_decoder: 0.008176, Accuracy: 99.85, IOU: 0.187779 Loss: 0.005610
+Epoch: [13][320/500], Time: 1.10, Data: 0.04, lr_encoder: 0.008136, lr_decoder: 0.008136, Accuracy: 99.85, IOU: 0.187606 Loss: 0.005595
+Epoch: [13][340/500], Time: 1.10, Data: 0.04, lr_encoder: 0.008096, lr_decoder: 0.008096, Accuracy: 99.85, IOU: 0.186462 Loss: 0.005715
+Epoch: [13][360/500], Time: 1.10, Data: 0.04, lr_encoder: 0.008056, lr_decoder: 0.008056, Accuracy: 99.85, IOU: 0.184883 Loss: 0.005649
+Epoch: [13][380/500], Time: 1.10, Data: 0.04, lr_encoder: 0.008016, lr_decoder: 0.008016, Accuracy: 99.85, IOU: 0.184630 Loss: 0.005661
+Epoch: [13][400/500], Time: 1.10, Data: 0.04, lr_encoder: 0.007976, lr_decoder: 0.007976, Accuracy: 99.85, IOU: 0.184121 Loss: 0.005605
+Epoch: [13][420/500], Time: 1.09, Data: 0.04, lr_encoder: 0.007937, lr_decoder: 0.007937, Accuracy: 99.85, IOU: 0.185103 Loss: 0.005560
+Epoch: [13][440/500], Time: 1.10, Data: 0.04, lr_encoder: 0.007897, lr_decoder: 0.007897, Accuracy: 99.85, IOU: 0.186643 Loss: 0.005481
+Epoch: [13][460/500], Time: 1.10, Data: 0.04, lr_encoder: 0.007857, lr_decoder: 0.007857, Accuracy: 99.85, IOU: 0.187364 Loss: 0.005411
+Epoch: [13][480/500], Time: 1.10, Data: 0.04, lr_encoder: 0.007817, lr_decoder: 0.007817, Accuracy: 99.86, IOU: 0.190436 Loss: 0.005370
+Saving checkpoints...
+Epoch: [14][0/500], Time: 1.32, Data: 0.00, lr_encoder: 0.007777, lr_decoder: 0.007777, Accuracy: 99.89, IOU: 0.308723 Loss: 0.005014
+Epoch: [14][20/500], Time: 1.09, Data: 0.04, lr_encoder: 0.007737, lr_decoder: 0.007737, Accuracy: 99.89, IOU: 0.222306 Loss: 0.005272
+Epoch: [14][40/500], Time: 1.07, Data: 0.04, lr_encoder: 0.007697, lr_decoder: 0.007697, Accuracy: 99.89, IOU: 0.200749 Loss: 0.004756
+Epoch: [14][60/500], Time: 1.08, Data: 0.04, lr_encoder: 0.007657, lr_decoder: 0.007657, Accuracy: 99.88, IOU: 0.195359 Loss: 0.004529
+Epoch: [14][80/500], Time: 1.08, Data: 0.04, lr_encoder: 0.007617, lr_decoder: 0.007617, Accuracy: 99.88, IOU: 0.196284 Loss: 0.004305
+Epoch: [14][100/500], Time: 1.08, Data: 0.04, lr_encoder: 0.007577, lr_decoder: 0.007577, Accuracy: 99.89, IOU: 0.195959 Loss: 0.004257
+Epoch: [14][120/500], Time: 1.08, Data: 0.04, lr_encoder: 0.007537, lr_decoder: 0.007537, Accuracy: 99.89, IOU: 0.199162 Loss: 0.004078
+Epoch: [14][140/500], Time: 1.08, Data: 0.04, lr_encoder: 0.007496, lr_decoder: 0.007496, Accuracy: 99.89, IOU: 0.194392 Loss: 0.003906
+Epoch: [14][160/500], Time: 1.09, Data: 0.04, lr_encoder: 0.007456, lr_decoder: 0.007456, Accuracy: 99.90, IOU: 0.201036 Loss: 0.003876
+Epoch: [14][180/500], Time: 1.10, Data: 0.04, lr_encoder: 0.007416, lr_decoder: 0.007416, Accuracy: 99.89, IOU: 0.205218 Loss: 0.003871
+Epoch: [14][200/500], Time: 1.11, Data: 0.04, lr_encoder: 0.007376, lr_decoder: 0.007376, Accuracy: 99.90, IOU: 0.203076 Loss: 0.003757
+Epoch: [14][220/500], Time: 1.11, Data: 0.04, lr_encoder: 0.007336, lr_decoder: 0.007336, Accuracy: 99.90, IOU: 0.204789 Loss: 0.004146
+Epoch: [14][240/500], Time: 1.11, Data: 0.04, lr_encoder: 0.007295, lr_decoder: 0.007295, Accuracy: 99.89, IOU: 0.202952 Loss: 0.004282
+Epoch: [14][260/500], Time: 1.10, Data: 0.04, lr_encoder: 0.007255, lr_decoder: 0.007255, Accuracy: 99.88, IOU: 0.200748 Loss: 0.004467
+Epoch: [14][280/500], Time: 1.10, Data: 0.04, lr_encoder: 0.007215, lr_decoder: 0.007215, Accuracy: 99.88, IOU: 0.199128 Loss: 0.004422
+Epoch: [14][300/500], Time: 1.10, Data: 0.04, lr_encoder: 0.007174, lr_decoder: 0.007174, Accuracy: 99.89, IOU: 0.198005 Loss: 0.004358
+Epoch: [14][320/500], Time: 1.10, Data: 0.04, lr_encoder: 0.007134, lr_decoder: 0.007134, Accuracy: 99.89, IOU: 0.200764 Loss: 0.004305
+Epoch: [14][340/500], Time: 1.10, Data: 0.04, lr_encoder: 0.007094, lr_decoder: 0.007094, Accuracy: 99.89, IOU: 0.204821 Loss: 0.004302
+Epoch: [14][360/500], Time: 1.11, Data: 0.04, lr_encoder: 0.007053, lr_decoder: 0.007053, Accuracy: 99.89, IOU: 0.206300 Loss: 0.004267
+Epoch: [14][380/500], Time: 1.11, Data: 0.04, lr_encoder: 0.007013, lr_decoder: 0.007013, Accuracy: 99.89, IOU: 0.209004 Loss: 0.004257
+Epoch: [14][400/500], Time: 1.10, Data: 0.04, lr_encoder: 0.006972, lr_decoder: 0.006972, Accuracy: 99.88, IOU: 0.209118 Loss: 0.004324
+Epoch: [14][420/500], Time: 1.10, Data: 0.04, lr_encoder: 0.006932, lr_decoder: 0.006932, Accuracy: 99.88, IOU: 0.209143 Loss: 0.004358
+Epoch: [14][440/500], Time: 1.10, Data: 0.04, lr_encoder: 0.006891, lr_decoder: 0.006891, Accuracy: 99.88, IOU: 0.208043 Loss: 0.004390
+Epoch: [14][460/500], Time: 1.10, Data: 0.04, lr_encoder: 0.006851, lr_decoder: 0.006851, Accuracy: 99.88, IOU: 0.207897 Loss: 0.004331
+Epoch: [14][480/500], Time: 1.09, Data: 0.04, lr_encoder: 0.006810, lr_decoder: 0.006810, Accuracy: 99.88, IOU: 0.207922 Loss: 0.004286
+Saving checkpoints...
+Epoch: [15][0/500], Time: 1.07, Data: 0.00, lr_encoder: 0.006770, lr_decoder: 0.006770, Accuracy: 99.87, IOU: 0.000000 Loss: 0.002707
+Epoch: [15][20/500], Time: 1.07, Data: 0.04, lr_encoder: 0.006729, lr_decoder: 0.006729, Accuracy: 99.89, IOU: 0.197248 Loss: 0.004792
+Epoch: [15][40/500], Time: 1.08, Data: 0.04, lr_encoder: 0.006688, lr_decoder: 0.006688, Accuracy: 99.91, IOU: 0.206613 Loss: 0.003678
+Epoch: [15][60/500], Time: 1.07, Data: 0.04, lr_encoder: 0.006648, lr_decoder: 0.006648, Accuracy: 99.91, IOU: 0.219238 Loss: 0.003689
+Epoch: [15][80/500], Time: 1.11, Data: 0.04, lr_encoder: 0.006607, lr_decoder: 0.006607, Accuracy: 99.90, IOU: 0.229546 Loss: 0.003840
+Epoch: [15][100/500], Time: 1.12, Data: 0.04, lr_encoder: 0.006566, lr_decoder: 0.006566, Accuracy: 99.89, IOU: 0.230328 Loss: 0.004028
+Epoch: [15][120/500], Time: 1.12, Data: 0.04, lr_encoder: 0.006526, lr_decoder: 0.006526, Accuracy: 99.89, IOU: 0.229701 Loss: 0.004126
+Epoch: [15][140/500], Time: 1.12, Data: 0.04, lr_encoder: 0.006485, lr_decoder: 0.006485, Accuracy: 99.89, IOU: 0.229913 Loss: 0.004090
+Epoch: [15][160/500], Time: 1.11, Data: 0.04, lr_encoder: 0.006444, lr_decoder: 0.006444, Accuracy: 99.89, IOU: 0.225787 Loss: 0.004035
+Epoch: [15][180/500], Time: 1.11, Data: 0.04, lr_encoder: 0.006403, lr_decoder: 0.006403, Accuracy: 99.89, IOU: 0.225853 Loss: 0.004002
+Epoch: [15][200/500], Time: 1.10, Data: 0.04, lr_encoder: 0.006362, lr_decoder: 0.006362, Accuracy: 99.89, IOU: 0.221572 Loss: 0.004166
+Epoch: [15][220/500], Time: 1.10, Data: 0.04, lr_encoder: 0.006321, lr_decoder: 0.006321, Accuracy: 99.89, IOU: 0.216882 Loss: 0.004191
+Epoch: [15][240/500], Time: 1.10, Data: 0.04, lr_encoder: 0.006280, lr_decoder: 0.006280, Accuracy: 99.89, IOU: 0.215100 Loss: 0.004211
+Epoch: [15][260/500], Time: 1.10, Data: 0.04, lr_encoder: 0.006239, lr_decoder: 0.006239, Accuracy: 99.88, IOU: 0.215582 Loss: 0.004323
+Epoch: [15][280/500], Time: 1.10, Data: 0.04, lr_encoder: 0.006198, lr_decoder: 0.006198, Accuracy: 99.88, IOU: 0.217323 Loss: 0.004290
+Epoch: [15][300/500], Time: 1.09, Data: 0.04, lr_encoder: 0.006157, lr_decoder: 0.006157, Accuracy: 99.89, IOU: 0.214034 Loss: 0.004195
+Epoch: [15][320/500], Time: 1.09, Data: 0.04, lr_encoder: 0.006116, lr_decoder: 0.006116, Accuracy: 99.89, IOU: 0.216706 Loss: 0.004113
+Epoch: [15][340/500], Time: 1.09, Data: 0.04, lr_encoder: 0.006075, lr_decoder: 0.006075, Accuracy: 99.89, IOU: 0.213929 Loss: 0.004232
+Epoch: [15][360/500], Time: 1.09, Data: 0.04, lr_encoder: 0.006034, lr_decoder: 0.006034, Accuracy: 99.89, IOU: 0.216210 Loss: 0.004162
+Epoch: [15][380/500], Time: 1.09, Data: 0.04, lr_encoder: 0.005993, lr_decoder: 0.005993, Accuracy: 99.89, IOU: 0.217943 Loss: 0.004232
+Epoch: [15][400/500], Time: 1.09, Data: 0.04, lr_encoder: 0.005952, lr_decoder: 0.005952, Accuracy: 99.89, IOU: 0.214760 Loss: 0.004259
+Epoch: [15][420/500], Time: 1.09, Data: 0.04, lr_encoder: 0.005911, lr_decoder: 0.005911, Accuracy: 99.89, IOU: 0.212770 Loss: 0.004274
+Epoch: [15][440/500], Time: 1.09, Data: 0.04, lr_encoder: 0.005869, lr_decoder: 0.005869, Accuracy: 99.89, IOU: 0.211472 Loss: 0.004264
+Epoch: [15][460/500], Time: 1.09, Data: 0.04, lr_encoder: 0.005828, lr_decoder: 0.005828, Accuracy: 99.89, IOU: 0.212106 Loss: 0.004246
+Epoch: [15][480/500], Time: 1.09, Data: 0.04, lr_encoder: 0.005787, lr_decoder: 0.005787, Accuracy: 99.89, IOU: 0.210103 Loss: 0.004220
+Saving checkpoints...
+Epoch: [16][0/500], Time: 1.34, Data: 0.00, lr_encoder: 0.005746, lr_decoder: 0.005746, Accuracy: 99.97, IOU: 0.138889 Loss: 0.000709
+Epoch: [16][20/500], Time: 1.08, Data: 0.04, lr_encoder: 0.005704, lr_decoder: 0.005704, Accuracy: 99.89, IOU: 0.194607 Loss: 0.003421
+Epoch: [16][40/500], Time: 1.07, Data: 0.04, lr_encoder: 0.005663, lr_decoder: 0.005663, Accuracy: 99.88, IOU: 0.230102 Loss: 0.004433
+Epoch: [16][60/500], Time: 1.07, Data: 0.04, lr_encoder: 0.005621, lr_decoder: 0.005621, Accuracy: 99.89, IOU: 0.226350 Loss: 0.004387
+Epoch: [16][80/500], Time: 1.06, Data: 0.04, lr_encoder: 0.005580, lr_decoder: 0.005580, Accuracy: 99.89, IOU: 0.212240 Loss: 0.004233
+Epoch: [16][100/500], Time: 1.06, Data: 0.04, lr_encoder: 0.005538, lr_decoder: 0.005538, Accuracy: 99.89, IOU: 0.228183 Loss: 0.004234
+Epoch: [16][120/500], Time: 1.07, Data: 0.04, lr_encoder: 0.005497, lr_decoder: 0.005497, Accuracy: 99.89, IOU: 0.228413 Loss: 0.003964
+Epoch: [16][140/500], Time: 1.07, Data: 0.04, lr_encoder: 0.005455, lr_decoder: 0.005455, Accuracy: 99.90, IOU: 0.226172 Loss: 0.003732
+Epoch: [16][160/500], Time: 1.07, Data: 0.04, lr_encoder: 0.005414, lr_decoder: 0.005414, Accuracy: 99.90, IOU: 0.222187 Loss: 0.003627
+Epoch: [16][180/500], Time: 1.07, Data: 0.04, lr_encoder: 0.005372, lr_decoder: 0.005372, Accuracy: 99.90, IOU: 0.228221 Loss: 0.003503
+Epoch: [16][200/500], Time: 1.08, Data: 0.04, lr_encoder: 0.005330, lr_decoder: 0.005330, Accuracy: 99.91, IOU: 0.230942 Loss: 0.003507
+Epoch: [16][220/500], Time: 1.08, Data: 0.04, lr_encoder: 0.005289, lr_decoder: 0.005289, Accuracy: 99.91, IOU: 0.229715 Loss: 0.003486
+Epoch: [16][240/500], Time: 1.08, Data: 0.04, lr_encoder: 0.005247, lr_decoder: 0.005247, Accuracy: 99.91, IOU: 0.230810 Loss: 0.003473
+Epoch: [16][260/500], Time: 1.09, Data: 0.04, lr_encoder: 0.005205, lr_decoder: 0.005205, Accuracy: 99.91, IOU: 0.229726 Loss: 0.003397
+Epoch: [16][280/500], Time: 1.08, Data: 0.04, lr_encoder: 0.005163, lr_decoder: 0.005163, Accuracy: 99.91, IOU: 0.227209 Loss: 0.003366
+Epoch: [16][300/500], Time: 1.09, Data: 0.04, lr_encoder: 0.005121, lr_decoder: 0.005121, Accuracy: 99.91, IOU: 0.226896 Loss: 0.003347
+Epoch: [16][320/500], Time: 1.10, Data: 0.04, lr_encoder: 0.005079, lr_decoder: 0.005079, Accuracy: 99.91, IOU: 0.228170 Loss: 0.003332
+Epoch: [16][340/500], Time: 1.09, Data: 0.04, lr_encoder: 0.005038, lr_decoder: 0.005038, Accuracy: 99.91, IOU: 0.224978 Loss: 0.003271
+Epoch: [16][360/500], Time: 1.10, Data: 0.04, lr_encoder: 0.004996, lr_decoder: 0.004996, Accuracy: 99.91, IOU: 0.226066 Loss: 0.003313
+Epoch: [16][380/500], Time: 1.10, Data: 0.04, lr_encoder: 0.004954, lr_decoder: 0.004954, Accuracy: 99.91, IOU: 0.225504 Loss: 0.003303
+Epoch: [16][400/500], Time: 1.10, Data: 0.04, lr_encoder: 0.004911, lr_decoder: 0.004911, Accuracy: 99.91, IOU: 0.227446 Loss: 0.003316
+Epoch: [16][420/500], Time: 1.10, Data: 0.04, lr_encoder: 0.004869, lr_decoder: 0.004869, Accuracy: 99.91, IOU: 0.229866 Loss: 0.003296
+Epoch: [16][440/500], Time: 1.10, Data: 0.04, lr_encoder: 0.004827, lr_decoder: 0.004827, Accuracy: 99.91, IOU: 0.231960 Loss: 0.003385
+Epoch: [16][460/500], Time: 1.10, Data: 0.04, lr_encoder: 0.004785, lr_decoder: 0.004785, Accuracy: 99.91, IOU: 0.230179 Loss: 0.003369
+Epoch: [16][480/500], Time: 1.11, Data: 0.04, lr_encoder: 0.004743, lr_decoder: 0.004743, Accuracy: 99.91, IOU: 0.229005 Loss: 0.003356
+Saving checkpoints...
+Epoch: [17][0/500], Time: 1.27, Data: 0.00, lr_encoder: 0.004701, lr_decoder: 0.004701, Accuracy: 99.89, IOU: 0.242503 Loss: 0.003612
+Epoch: [17][20/500], Time: 1.17, Data: 0.04, lr_encoder: 0.004658, lr_decoder: 0.004658, Accuracy: 99.89, IOU: 0.206278 Loss: 0.003776
+Epoch: [17][40/500], Time: 1.10, Data: 0.04, lr_encoder: 0.004616, lr_decoder: 0.004616, Accuracy: 99.90, IOU: 0.175467 Loss: 0.003262
+Epoch: [17][60/500], Time: 1.12, Data: 0.04, lr_encoder: 0.004574, lr_decoder: 0.004574, Accuracy: 99.91, IOU: 0.204074 Loss: 0.003207
+Epoch: [17][80/500], Time: 1.11, Data: 0.04, lr_encoder: 0.004531, lr_decoder: 0.004531, Accuracy: 99.91, IOU: 0.197825 Loss: 0.003221
+Epoch: [17][100/500], Time: 1.10, Data: 0.04, lr_encoder: 0.004489, lr_decoder: 0.004489, Accuracy: 99.91, IOU: 0.204847 Loss: 0.003239
+Epoch: [17][120/500], Time: 1.11, Data: 0.04, lr_encoder: 0.004446, lr_decoder: 0.004446, Accuracy: 99.91, IOU: 0.214558 Loss: 0.003290
+Epoch: [17][140/500], Time: 1.10, Data: 0.04, lr_encoder: 0.004404, lr_decoder: 0.004404, Accuracy: 99.90, IOU: 0.215725 Loss: 0.003503
+Epoch: [17][160/500], Time: 1.09, Data: 0.04, lr_encoder: 0.004361, lr_decoder: 0.004361, Accuracy: 99.91, IOU: 0.211226 Loss: 0.003415
+Epoch: [17][180/500], Time: 1.08, Data: 0.04, lr_encoder: 0.004318, lr_decoder: 0.004318, Accuracy: 99.91, IOU: 0.206945 Loss: 0.003392
+Epoch: [17][200/500], Time: 1.08, Data: 0.04, lr_encoder: 0.004276, lr_decoder: 0.004276, Accuracy: 99.90, IOU: 0.202631 Loss: 0.003455
+Epoch: [17][220/500], Time: 1.07, Data: 0.04, lr_encoder: 0.004233, lr_decoder: 0.004233, Accuracy: 99.90, IOU: 0.209275 Loss: 0.003442
+Epoch: [17][240/500], Time: 1.07, Data: 0.04, lr_encoder: 0.004190, lr_decoder: 0.004190, Accuracy: 99.90, IOU: 0.212292 Loss: 0.003446
+Epoch: [17][260/500], Time: 1.07, Data: 0.04, lr_encoder: 0.004147, lr_decoder: 0.004147, Accuracy: 99.91, IOU: 0.212146 Loss: 0.003434
+Epoch: [17][280/500], Time: 1.07, Data: 0.04, lr_encoder: 0.004104, lr_decoder: 0.004104, Accuracy: 99.91, IOU: 0.211311 Loss: 0.003440
+Epoch: [17][300/500], Time: 1.07, Data: 0.04, lr_encoder: 0.004061, lr_decoder: 0.004061, Accuracy: 99.91, IOU: 0.212616 Loss: 0.003423
+Epoch: [17][320/500], Time: 1.07, Data: 0.04, lr_encoder: 0.004018, lr_decoder: 0.004018, Accuracy: 99.90, IOU: 0.214650 Loss: 0.003472
+Epoch: [17][340/500], Time: 1.07, Data: 0.04, lr_encoder: 0.003975, lr_decoder: 0.003975, Accuracy: 99.90, IOU: 0.215558 Loss: 0.003625
+Epoch: [17][360/500], Time: 1.08, Data: 0.04, lr_encoder: 0.003932, lr_decoder: 0.003932, Accuracy: 99.90, IOU: 0.215620 Loss: 0.003564
+Epoch: [17][380/500], Time: 1.08, Data: 0.04, lr_encoder: 0.003889, lr_decoder: 0.003889, Accuracy: 99.90, IOU: 0.216362 Loss: 0.003609
+Epoch: [17][400/500], Time: 1.08, Data: 0.04, lr_encoder: 0.003846, lr_decoder: 0.003846, Accuracy: 99.90, IOU: 0.220484 Loss: 0.003607
+Epoch: [17][420/500], Time: 1.08, Data: 0.04, lr_encoder: 0.003802, lr_decoder: 0.003802, Accuracy: 99.90, IOU: 0.221014 Loss: 0.003589
+Epoch: [17][440/500], Time: 1.08, Data: 0.04, lr_encoder: 0.003759, lr_decoder: 0.003759, Accuracy: 99.90, IOU: 0.221282 Loss: 0.003622
+Epoch: [17][460/500], Time: 1.08, Data: 0.04, lr_encoder: 0.003716, lr_decoder: 0.003716, Accuracy: 99.90, IOU: 0.222240 Loss: 0.003589
+Epoch: [17][480/500], Time: 1.08, Data: 0.04, lr_encoder: 0.003672, lr_decoder: 0.003672, Accuracy: 99.90, IOU: 0.221576 Loss: 0.003608
+Saving checkpoints...
+Epoch: [18][0/500], Time: 1.12, Data: 0.00, lr_encoder: 0.003629, lr_decoder: 0.003629, Accuracy: 99.94, IOU: 0.365836 Loss: 0.002458
+Epoch: [18][20/500], Time: 1.12, Data: 0.04, lr_encoder: 0.003585, lr_decoder: 0.003585, Accuracy: 99.93, IOU: 0.198694 Loss: 0.002450
+Epoch: [18][40/500], Time: 1.07, Data: 0.04, lr_encoder: 0.003542, lr_decoder: 0.003542, Accuracy: 99.92, IOU: 0.238212 Loss: 0.002909
+Epoch: [18][60/500], Time: 1.08, Data: 0.04, lr_encoder: 0.003498, lr_decoder: 0.003498, Accuracy: 99.91, IOU: 0.232431 Loss: 0.003188
+Epoch: [18][80/500], Time: 1.08, Data: 0.04, lr_encoder: 0.003454, lr_decoder: 0.003454, Accuracy: 99.92, IOU: 0.239840 Loss: 0.003203
+Epoch: [18][100/500], Time: 1.08, Data: 0.04, lr_encoder: 0.003411, lr_decoder: 0.003411, Accuracy: 99.92, IOU: 0.233806 Loss: 0.003103
+Epoch: [18][120/500], Time: 1.09, Data: 0.04, lr_encoder: 0.003367, lr_decoder: 0.003367, Accuracy: 99.92, IOU: 0.232071 Loss: 0.003050
+Epoch: [18][140/500], Time: 1.10, Data: 0.04, lr_encoder: 0.003323, lr_decoder: 0.003323, Accuracy: 99.92, IOU: 0.235978 Loss: 0.003006
+Epoch: [18][160/500], Time: 1.10, Data: 0.04, lr_encoder: 0.003279, lr_decoder: 0.003279, Accuracy: 99.92, IOU: 0.234020 Loss: 0.002996
+Epoch: [18][180/500], Time: 1.09, Data: 0.04, lr_encoder: 0.003235, lr_decoder: 0.003235, Accuracy: 99.92, IOU: 0.242959 Loss: 0.003045
+Epoch: [18][200/500], Time: 1.09, Data: 0.04, lr_encoder: 0.003191, lr_decoder: 0.003191, Accuracy: 99.92, IOU: 0.238644 Loss: 0.003095
+Epoch: [18][220/500], Time: 1.09, Data: 0.04, lr_encoder: 0.003146, lr_decoder: 0.003146, Accuracy: 99.91, IOU: 0.238964 Loss: 0.003157
+Epoch: [18][240/500], Time: 1.08, Data: 0.04, lr_encoder: 0.003102, lr_decoder: 0.003102, Accuracy: 99.91, IOU: 0.237341 Loss: 0.003105
+Epoch: [18][260/500], Time: 1.08, Data: 0.04, lr_encoder: 0.003058, lr_decoder: 0.003058, Accuracy: 99.91, IOU: 0.243869 Loss: 0.003138
+Epoch: [18][280/500], Time: 1.08, Data: 0.04, lr_encoder: 0.003014, lr_decoder: 0.003014, Accuracy: 99.91, IOU: 0.248207 Loss: 0.003166
+Epoch: [18][300/500], Time: 1.07, Data: 0.04, lr_encoder: 0.002969, lr_decoder: 0.002969, Accuracy: 99.91, IOU: 0.245602 Loss: 0.003119
+Epoch: [18][320/500], Time: 1.07, Data: 0.04, lr_encoder: 0.002925, lr_decoder: 0.002925, Accuracy: 99.91, IOU: 0.244129 Loss: 0.003113
+Epoch: [18][340/500], Time: 1.08, Data: 0.04, lr_encoder: 0.002880, lr_decoder: 0.002880, Accuracy: 99.91, IOU: 0.242442 Loss: 0.003144
+Epoch: [18][360/500], Time: 1.08, Data: 0.04, lr_encoder: 0.002835, lr_decoder: 0.002835, Accuracy: 99.91, IOU: 0.243350 Loss: 0.003228
+Epoch: [18][380/500], Time: 1.09, Data: 0.04, lr_encoder: 0.002790, lr_decoder: 0.002790, Accuracy: 99.91, IOU: 0.243221 Loss: 0.003286
+Epoch: [18][400/500], Time: 1.09, Data: 0.04, lr_encoder: 0.002746, lr_decoder: 0.002746, Accuracy: 99.91, IOU: 0.239485 Loss: 0.003233
+Epoch: [18][420/500], Time: 1.09, Data: 0.04, lr_encoder: 0.002701, lr_decoder: 0.002701, Accuracy: 99.91, IOU: 0.238125 Loss: 0.003239
+Epoch: [18][440/500], Time: 1.09, Data: 0.04, lr_encoder: 0.002656, lr_decoder: 0.002656, Accuracy: 99.91, IOU: 0.239458 Loss: 0.003215
+Epoch: [18][460/500], Time: 1.09, Data: 0.04, lr_encoder: 0.002611, lr_decoder: 0.002611, Accuracy: 99.91, IOU: 0.239076 Loss: 0.003183
+Epoch: [18][480/500], Time: 1.09, Data: 0.04, lr_encoder: 0.002565, lr_decoder: 0.002565, Accuracy: 99.92, IOU: 0.237844 Loss: 0.003154
+Saving checkpoints...
+Epoch: [19][0/500], Time: 1.09, Data: 0.00, lr_encoder: 0.002520, lr_decoder: 0.002520, Accuracy: 99.93, IOU: 0.145833 Loss: 0.002642
+Epoch: [19][20/500], Time: 1.05, Data: 0.04, lr_encoder: 0.002475, lr_decoder: 0.002475, Accuracy: 99.90, IOU: 0.283649 Loss: 0.003213
+Epoch: [19][40/500], Time: 1.11, Data: 0.04, lr_encoder: 0.002429, lr_decoder: 0.002429, Accuracy: 99.93, IOU: 0.259998 Loss: 0.002446
+Epoch: [19][60/500], Time: 1.12, Data: 0.04, lr_encoder: 0.002384, lr_decoder: 0.002384, Accuracy: 99.92, IOU: 0.255186 Loss: 0.002810
+Epoch: [19][80/500], Time: 1.11, Data: 0.04, lr_encoder: 0.002338, lr_decoder: 0.002338, Accuracy: 99.92, IOU: 0.247429 Loss: 0.003115
+Epoch: [19][100/500], Time: 1.11, Data: 0.04, lr_encoder: 0.002292, lr_decoder: 0.002292, Accuracy: 99.92, IOU: 0.251215 Loss: 0.003070
+Epoch: [19][120/500], Time: 1.11, Data: 0.04, lr_encoder: 0.002247, lr_decoder: 0.002247, Accuracy: 99.92, IOU: 0.246818 Loss: 0.003016
+Epoch: [19][140/500], Time: 1.10, Data: 0.04, lr_encoder: 0.002201, lr_decoder: 0.002201, Accuracy: 99.92, IOU: 0.242564 Loss: 0.002924
+Epoch: [19][160/500], Time: 1.09, Data: 0.04, lr_encoder: 0.002154, lr_decoder: 0.002154, Accuracy: 99.92, IOU: 0.242629 Loss: 0.002919
+Epoch: [19][180/500], Time: 1.09, Data: 0.04, lr_encoder: 0.002108, lr_decoder: 0.002108, Accuracy: 99.92, IOU: 0.245003 Loss: 0.002950
+Epoch: [19][200/500], Time: 1.09, Data: 0.04, lr_encoder: 0.002062, lr_decoder: 0.002062, Accuracy: 99.92, IOU: 0.247690 Loss: 0.002946
+Epoch: [19][220/500], Time: 1.10, Data: 0.04, lr_encoder: 0.002016, lr_decoder: 0.002016, Accuracy: 99.92, IOU: 0.245669 Loss: 0.002899
+Epoch: [19][240/500], Time: 1.10, Data: 0.04, lr_encoder: 0.001969, lr_decoder: 0.001969, Accuracy: 99.92, IOU: 0.247581 Loss: 0.002897
+Epoch: [19][260/500], Time: 1.10, Data: 0.04, lr_encoder: 0.001923, lr_decoder: 0.001923, Accuracy: 99.92, IOU: 0.249676 Loss: 0.002901
+Epoch: [19][280/500], Time: 1.11, Data: 0.04, lr_encoder: 0.001876, lr_decoder: 0.001876, Accuracy: 99.92, IOU: 0.250124 Loss: 0.002835
+Epoch: [19][300/500], Time: 1.10, Data: 0.04, lr_encoder: 0.001829, lr_decoder: 0.001829, Accuracy: 99.92, IOU: 0.247770 Loss: 0.002824
+Epoch: [19][320/500], Time: 1.10, Data: 0.04, lr_encoder: 0.001782, lr_decoder: 0.001782, Accuracy: 99.92, IOU: 0.248509 Loss: 0.002839
+Epoch: [19][340/500], Time: 1.10, Data: 0.04, lr_encoder: 0.001735, lr_decoder: 0.001735, Accuracy: 99.92, IOU: 0.248203 Loss: 0.002799
+Epoch: [19][360/500], Time: 1.10, Data: 0.04, lr_encoder: 0.001687, lr_decoder: 0.001687, Accuracy: 99.92, IOU: 0.244226 Loss: 0.002841
+Epoch: [19][380/500], Time: 1.10, Data: 0.04, lr_encoder: 0.001640, lr_decoder: 0.001640, Accuracy: 99.92, IOU: 0.241606 Loss: 0.002834
+Epoch: [19][400/500], Time: 1.10, Data: 0.04, lr_encoder: 0.001592, lr_decoder: 0.001592, Accuracy: 99.92, IOU: 0.245037 Loss: 0.002840
+Epoch: [19][420/500], Time: 1.10, Data: 0.04, lr_encoder: 0.001545, lr_decoder: 0.001545, Accuracy: 99.92, IOU: 0.243663 Loss: 0.002842
+Epoch: [19][440/500], Time: 1.09, Data: 0.04, lr_encoder: 0.001497, lr_decoder: 0.001497, Accuracy: 99.92, IOU: 0.241851 Loss: 0.002881
+Epoch: [19][460/500], Time: 1.09, Data: 0.04, lr_encoder: 0.001448, lr_decoder: 0.001448, Accuracy: 99.92, IOU: 0.238253 Loss: 0.002851
+Epoch: [19][480/500], Time: 1.09, Data: 0.04, lr_encoder: 0.001400, lr_decoder: 0.001400, Accuracy: 99.92, IOU: 0.238883 Loss: 0.002865
+Saving checkpoints...
+Epoch: [20][0/500], Time: 0.93, Data: 0.00, lr_encoder: 0.001352, lr_decoder: 0.001352, Accuracy: 99.98, IOU: 0.000000 Loss: 0.000566
+Epoch: [20][20/500], Time: 1.10, Data: 0.04, lr_encoder: 0.001303, lr_decoder: 0.001303, Accuracy: 99.94, IOU: 0.197458 Loss: 0.002051
+Epoch: [20][40/500], Time: 1.11, Data: 0.04, lr_encoder: 0.001254, lr_decoder: 0.001254, Accuracy: 99.93, IOU: 0.199928 Loss: 0.002512
+Epoch: [20][60/500], Time: 1.09, Data: 0.04, lr_encoder: 0.001205, lr_decoder: 0.001205, Accuracy: 99.92, IOU: 0.225343 Loss: 0.002773
+Epoch: [20][80/500], Time: 1.09, Data: 0.04, lr_encoder: 0.001156, lr_decoder: 0.001156, Accuracy: 99.92, IOU: 0.210828 Loss: 0.002715
+Epoch: [20][100/500], Time: 1.08, Data: 0.04, lr_encoder: 0.001106, lr_decoder: 0.001106, Accuracy: 99.92, IOU: 0.217295 Loss: 0.002735
+Epoch: [20][120/500], Time: 1.09, Data: 0.04, lr_encoder: 0.001056, lr_decoder: 0.001056, Accuracy: 99.92, IOU: 0.223581 Loss: 0.002826
+Epoch: [20][140/500], Time: 1.09, Data: 0.04, lr_encoder: 0.001006, lr_decoder: 0.001006, Accuracy: 99.92, IOU: 0.230302 Loss: 0.002829
+Epoch: [20][160/500], Time: 1.09, Data: 0.04, lr_encoder: 0.000956, lr_decoder: 0.000956, Accuracy: 99.92, IOU: 0.224059 Loss: 0.002785
+Epoch: [20][180/500], Time: 1.09, Data: 0.04, lr_encoder: 0.000905, lr_decoder: 0.000905, Accuracy: 99.92, IOU: 0.224597 Loss: 0.002895
+Epoch: [20][200/500], Time: 1.09, Data: 0.04, lr_encoder: 0.000855, lr_decoder: 0.000855, Accuracy: 99.92, IOU: 0.218997 Loss: 0.002878
+Epoch: [20][220/500], Time: 1.10, Data: 0.04, lr_encoder: 0.000803, lr_decoder: 0.000803, Accuracy: 99.92, IOU: 0.218337 Loss: 0.002846
+Epoch: [20][240/500], Time: 1.09, Data: 0.04, lr_encoder: 0.000752, lr_decoder: 0.000752, Accuracy: 99.92, IOU: 0.225889 Loss: 0.002972
+Epoch: [20][260/500], Time: 1.10, Data: 0.04, lr_encoder: 0.000700, lr_decoder: 0.000700, Accuracy: 99.92, IOU: 0.229679 Loss: 0.003052
+Epoch: [20][280/500], Time: 1.09, Data: 0.04, lr_encoder: 0.000647, lr_decoder: 0.000647, Accuracy: 99.92, IOU: 0.229410 Loss: 0.003031
+Epoch: [20][300/500], Time: 1.09, Data: 0.04, lr_encoder: 0.000594, lr_decoder: 0.000594, Accuracy: 99.92, IOU: 0.227925 Loss: 0.002999
+Epoch: [20][320/500], Time: 1.09, Data: 0.04, lr_encoder: 0.000541, lr_decoder: 0.000541, Accuracy: 99.92, IOU: 0.228399 Loss: 0.003044
+Epoch: [20][340/500], Time: 1.09, Data: 0.04, lr_encoder: 0.000487, lr_decoder: 0.000487, Accuracy: 99.92, IOU: 0.228670 Loss: 0.003127
+Epoch: [20][360/500], Time: 1.09, Data: 0.04, lr_encoder: 0.000432, lr_decoder: 0.000432, Accuracy: 99.92, IOU: 0.229958 Loss: 0.003154
+Epoch: [20][380/500], Time: 1.09, Data: 0.04, lr_encoder: 0.000376, lr_decoder: 0.000376, Accuracy: 99.92, IOU: 0.228134 Loss: 0.003136
+Epoch: [20][400/500], Time: 1.09, Data: 0.04, lr_encoder: 0.000320, lr_decoder: 0.000320, Accuracy: 99.92, IOU: 0.225626 Loss: 0.003144
+Epoch: [20][420/500], Time: 1.09, Data: 0.04, lr_encoder: 0.000262, lr_decoder: 0.000262, Accuracy: 99.92, IOU: 0.225644 Loss: 0.003130
+Epoch: [20][440/500], Time: 1.09, Data: 0.04, lr_encoder: 0.000203, lr_decoder: 0.000203, Accuracy: 99.92, IOU: 0.226945 Loss: 0.003138
+Epoch: [20][460/500], Time: 1.09, Data: 0.04, lr_encoder: 0.000142, lr_decoder: 0.000142, Accuracy: 99.92, IOU: 0.226640 Loss: 0.003096
+Epoch: [20][480/500], Time: 1.09, Data: 0.04, lr_encoder: 0.000078, lr_decoder: 0.000078, Accuracy: 99.92, IOU: 0.228061 Loss: 0.003114
+Saving checkpoints...
+Training Done!

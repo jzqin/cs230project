@@ -4,6 +4,7 @@ CS230
 """
 
 import os
+import warnings
 
 def seg_map_dict(seg_dir, scan_dir):
     
@@ -22,7 +23,9 @@ def seg_map_dict(seg_dir, scan_dir):
         Dictionary mapping the segmentation data to the scans for each patient    
     """
     
-
+    seg_dir = os.path.abspath(seg_dir) + '/'
+    scan_dir = os.path.abspath(scan_dir) + '/'
+    
     seg_map_dict = dict()
 
     for file in os.listdir(seg_dir):
@@ -40,9 +43,8 @@ def seg_map_dict(seg_dir, scan_dir):
                 if f.endswith('.dcm'):
                     assert seg_map_dict.get(file) == None # If this fails there is more than one directory containing a .dcm file
                     path = os.path.join(root)
-                
-                
-        seg_map_dict[file] = path
+                        
+        seg_map_dict[seg_dir + file] = path
 
     warnings.warn('{} Did not get mapped; check name mismatch'.format([key for key,val in seg_map_dict.items() if val=='']))
 

@@ -1,0 +1,34 @@
+Input arguments:
+id               resnext101_ppm
+arch_encoder     resnext101
+arch_decoder     ppm
+weights_encoder  
+weights_decoder  
+fc_dim           2048
+list_train       /home/ky_aneur/cs230/code/cta-scripts/train_list.odgt
+list_val         ./data/validation.odgt
+root_dataset     /data2/yeom/ky_aneur/sah_png/train
+num_gpus         2
+batch_size_per_gpu 2
+num_epoch        20
+start_epoch      1
+epoch_iters      500
+optim            adam
+lr_encoder       0.02
+lr_decoder       0.02
+lr_pow           0.9
+beta1            0.9
+weight_decay     0.0001
+deep_sup_scale   0.4
+fix_bn           0
+num_class        2
+workers          16
+imgSize          [300, 375, 450, 525, 600]
+imgMaxSize       1000
+padding_constant 8
+segm_downsampling_rate 8
+random_flip      True
+seed             304
+ckpt             ./ckpt
+disp_iter        20
+Model ID: resnext101_ppm-resnext101-ppm-ngpus2-batchSize4-imgMaxSize1000-paddingConst8-segmDownsampleRate8-LR_encoder0.02-LR_decoder0.02-epoch20
