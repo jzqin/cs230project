@@ -21,6 +21,9 @@ Modeling includes testing different 1) architectures, 2) upsampling extents, 3) 
 * ./cta-scripts/architecture_and_hyperparam_search.ipynb : script to automate invoking calling the CSAIL network via shell commands  
 * ./cta-scripts/evaluate_models.ipynb : after a model is trained, this script runs the model on the test data  
 * ./resnet/semantic-segmentation-pytorch : code for repository used for modeling
+* other potentially useful files:
+  * /resnet/semantic-segmentation-pytorch/cs230_train.sh
+  * /resnet/semantic-segmentation-pytorch/cs230_eval.sh
 
 We changed the following aspects of the original semantic-segmentation repo:  
 * train.py :
@@ -36,6 +39,5 @@ We changed the following aspects of the original semantic-segmentation repo:
 Analyze data by seeing how training loss and IOU change over time, visualizing data with plots  
 * ./cta-scripts/visualize_metrics.ipynb : code for visualizing training IOU and loss for architecture and hyperparameter tuning  
 * ./cta-scripts/visualize_data-Error_analysis.ipynb : visualize individual images for determining model deficits and prediction capabilities  
-
 
 
